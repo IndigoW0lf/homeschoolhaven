@@ -1,0 +1,125 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+// card 
+.card{
+    border-color: var(--border-color);
+    background-color: var(--card-color);
+    &.card-callout{
+        border-left-width: .4rem;
+        border-left-color: var(--primary-color);
+    }
+    .card-header{
+        background-color: transparent;
+        border-bottom: none;
+        h6{
+            font-size: 17px;
+        }
+    }
+    .card-footer{
+        border-color: var(--border-color);
+    }
+
+}
+
+.checkout-sidebar-price-table {
+	.title {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
+		color: #000;
+		padding-bottom: 12px;
+	}
+	.sub-total-price {
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+		padding: 8px 0;
+		.total-price {
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			.value {
+				line-height: 32px;
+				font-size: 14px;
+			}
+			.price {
+				line-height: 32px;
+				font-size: 16px;
+			}
+		}
+		.shipping {
+			.value {
+				color: #FF4B22;
+			}
+			.price {
+				color: #FF4B22;
+			}
+		}
+		.discount {
+			.value {
+				color: #7CB637;
+			}
+			.price {
+				color: #7CB637;
+			}
+		}
+	}
+	.total-payable {
+		padding: 8px 0;
+		.payable-price {
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			.value {
+				line-height: 32px;
+				font-size: 14px;
+				font-weight: 500;
+			}
+			.price {
+				line-height: 32px;
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+	}
+	.price-table-btn {
+		margin-top: 16px;
+	}
+}
+
+.design-box {
+    margin: 0;
+    padding: 30px 20px;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding: 0 20px 0 60px;
+        margin: 0 0 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .icon {
+        color: var(--card-color);
+        background: var(--primary-color);
+        position: absolute;
+        border: 1px solid;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        right: 0;
+        line-height: 40px;
+        z-index: 1;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,108 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+
+.timeline-item {
+	border-left: 2px solid var(--border-color);
+	display: flex;
+	position: relative;
+	padding: 1em 2em 2em;
+	
+	&:hover{
+		&::after{
+			transform: scale(3.5);
+		}
+	}
+
+	&::after {
+		@include transition(ease .1s);
+        border: 2px solid var(--border-color);
+		background: var(--color-900);
+        display: block;
+        position: absolute;
+        content: '';
+        width: 8px;
+		height: 8px;
+		top: 1.3em;
+		left: -5px;
+		border-radius: 30px;
+	}
+	&.ti-primary:after{
+		background: var(--primary-color);
+	}
+	&.ti-info:after{
+		background: #4FB8C9;
+	}
+	&.ti-success:after{
+		background: #7EB93F;
+	}
+	&.ti-warning:after{
+		background: #f8b500;
+	}
+	&.ti-danger:after{
+		background: #FF1843;
+	}
+	
+}
+
+/*******Horizantal-Timeline******/
+
+.hor-timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .hor-timeline-step {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 1rem;
+        @media (min-width:991px) {
+            &:not(:last-child):after{
+                content: "";
+                display: block;
+                border-top: .25rem dotted var(--primary-color);
+                width: 3.46rem;
+                position: absolute;
+                left: 7.5rem;
+                top: .3125rem
+            }
+            &:not(:first-child):before {
+                content: "";
+                display: block;
+                border-top: .25rem dotted var(--primary-color);
+                width: 3.8125rem;
+                position: absolute;
+                right: 7.5rem;
+                top: .3125rem
+            }
+        }
+        .timeline-content {
+            width: 10rem;
+            text-align: center;
+            .inner-circle {
+                border-radius: 1.5rem;
+                height: 1rem;
+                width: 1rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--primary-color);
+                &:before{
+                    content: "";
+                    background-color: var(--primary-color);
+                    display: inline-block;
+                    height: 3rem;
+                    width: 3rem;
+                    min-width: 3rem;
+                    border-radius: 6.25rem;
+                    opacity: .5
+                }
+            }
+        }
+    }
+}

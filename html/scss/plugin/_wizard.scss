@@ -1,0 +1,96 @@
+.step-app {
+    > .step-steps {
+        border-radius: 0;
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            line-height: 34px;
+            padding: 0;
+            margin-right: 25px;
+            flex-grow: 0;
+            flex: inherit;
+            outline: none;
+            margin-bottom: 10px;
+            border-right: 0px;
+            &.active {
+                background-color: transparent;
+                color: var(--primary-color);
+                span {
+                    background-color: var(--primary-color);
+                }
+            }
+            &.done {
+                background-color: transparent;
+                color: var(--bs-green);
+                span {
+                    background-color: var(--bs-green);
+                }
+            }
+            &:hover {
+                background-color: transparent;
+            }
+            span {
+                padding: 0 12px;
+                background-color: var(--color-400);
+                color: var(--white-color);
+                border-radius: .25rem;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+
+    > .step-content {
+        margin-top: 30px;
+        border: 0;
+        padding: 0;
+    }
+    > .step-footer {
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
+        justify-content: flex-end;
+        margin-bottom: 0;
+
+        .btn {
+            margin: 5px;
+        }
+
+        > .step-btn {
+            background-color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            color: var(--white-color);
+            padding: .375rem .75rem;
+            border-radius: .25rem;
+        }
+    }
+}
+#w-vertical {
+    .step-app {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        >.step-steps {
+            min-width: 260px;
+            flex-direction: column;
+            padding: 0 10px 0 0;
+            margin-right: 20px;
+            li {
+                margin-bottom: 15px;
+            }
+        }
+        >.step-content {
+            margin-top: 0;
+            width: 100%;
+        }
+        > .step-footer {
+            justify-content: flex-end;
+        }
+    }
+}

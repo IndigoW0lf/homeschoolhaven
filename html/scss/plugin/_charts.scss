@@ -1,0 +1,53 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+#apex-circle-gradient{
+    circle{
+       fill:var(--card-color);
+    }
+}
+.ac-line-transparent{
+    line{
+        stroke: var(--card-color);
+    }
+}
+.apexcharts-canvas{
+	line{
+		stroke: var(--border-color);
+	}
+	text{
+		fill: var(--color-500);
+	}
+	circle{
+		stroke: var(--border-color);
+	}
+	.apexcharts-legend-text{
+		color: var(--color-500) !important;
+	}
+}
+.sparkline_chart{
+    canvas{
+        width: 100% !important;
+    }
+}
+.line-color{
+    .apexcharts-canvas {
+        line {
+            stroke: var(--card-color) !important;
+        }
+    }
+}
+#apex-emplyoeeAnalytics{
+    .apexcharts-canvas line {
+        stroke: transparent !important;
+    }
+}
+#apex-MainCategories,#incomeanalytics{
+    .apexcharts-canvas{
+        margin: 0 auto;
+    }
+}

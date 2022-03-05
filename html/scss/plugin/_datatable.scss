@@ -1,0 +1,41 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+.table-hover>tbody>tr:hover{
+    --bs-table-accent-bg: var(--color-100);
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, 
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+    top: 50%;
+    background-color:var(--primary-color);
+    transform: translateY(-50%);
+}
+table.dataTable>tbody>tr.child ul.dtr-details{
+    display: block;
+}
+#myProjectTable_length,#myProjectTable_filter,#myProjectTable_info,
+#myDataTable_length,#myDataTable_filter,#myDataTable_info,
+#timetracker-table_length,#timetracker-table_filter,#timetracker-table_info,#timetracker-table-two{
+    @media only screen and (max-width:  $break-small - 1px) {
+        display: none;
+    }
+}
+#myProjectTable_paginate,#myDataTable_paginate,#timetracker-table_paginate,#timetracker-table-two_paginate{
+    ul.pagination {
+        @media only screen and (max-width:  $break-small - 1px) {
+            justify-content: start!important;
+        }
+    }
+}
+#priceTableup_wrapper,#priceTabledown_wrapper,#priceTableuponly_wrapper,#priceTabledownonly_wrapper{
+    .dataTables_filter,.dataTables_length,.dataTables_info,.dataTables_paginate{
+        display: none;
+    }
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+    color:var(--text-color);
+}

@@ -1,0 +1,272 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+:root {
+	--dark-color: 		#323A45;
+
+    --color-fff:		#FFFFFF;
+	--color-100:		#F0F0F0;
+	--color-200:		#EEEEEE;
+	--color-300:		#E0E0E0;
+	--color-400:		#BDBDBD;
+	--color-500:		#555555;
+	--color-600:		#757575;
+	--color-700:		#616161;
+	--color-800:		#424242;
+	--color-900:		#212121;
+	--color-000:		#000000;
+
+	--border-color:		#f0f0f0;
+	--card-color: 		#ffffff;
+	--body-color: 		#f9fbfd;
+	--white-color: 		#ffffff;
+	--sidebar-color:	#fcfcfc;
+    --text-color:       #212529;
+	--svg-color: 		#76808F;
+
+	--hc-font-color:	#555555;
+	--hc-bg-color:		#f0f0f0;
+
+    --primary-color:    #163339;
+	--secondary-color: 	#CEA254;
+
+	--chart-color1:	 	#6aab9c;
+	--chart-color2: 	#f7b36b;
+	--chart-color3: 	#97B0AA;
+	--chart-color4: 	#4D6E94;
+	--chart-color5: 	#81A1CA;
+
+	--buy-color:		#0ecb81;
+	--sell-color:		#f6465d;
+
+}
+
+[data-theme="dark"] {
+	--dark-color: 		#323A45;
+
+	--color-fff:		#000000;
+	--color-100:		#212121;
+	--color-200:		#262727;
+	--color-300:		#616161;
+	--color-400:		#757575;
+	--color-500:		#8f8f8f;
+	--color-600:		#BDBDBD;
+	--color-700:		#E0E0E0;
+	--color-800:		#EEEEEE;
+	--color-900:		#F0F0F0;
+	--color-000:		#FFFFFF;
+
+	--border-color:		#353535;
+	--card-color: 		#262727;
+	--body-color: 		#1e1f20;
+	--white-color: 		#ffffff;
+	--sidebar-color:	#fcfcfc;
+    --text-color:       #8f8f8f;
+
+	--hc-font-color:	#555555;
+	--hc-bg-color:		#f0f0f0;
+
+    [class="theme-cyan"] {
+		--primary-color: 	#00bdaa;
+	}
+
+	[class="theme-indigo"] {
+		--border-color:		#212020;
+		--card-color: 		#101010;
+		--body-color: 		#050505;
+	}
+
+	[class="theme-mist"] {
+		--primary-color:    #163339;
+        --border-color:		#1a1f2d;
+		--card-color: 		#10141f;
+		--body-color: 		#080b13;
+	}
+	
+	[class="theme-orange"] {
+        --border-color:		#092940;
+		--card-color: 		#052133;
+		--body-color: 		#051e2f;
+	}
+	
+	[class="theme-blush"] {
+        --border-color:		#242331;
+		--card-color: 		#1a1925;
+		--body-color: 		#15141f;
+	}
+	
+	[class="theme-red"] {
+		--primary-color: 	#f73e60;
+        --border-color:		#222335;
+		--card-color: 		#161725;
+		--body-color: 		#11121d;
+    }
+}
+
+[data-theme="high-contrast"] {
+	--dark-color: 		#323A45;
+
+	--color-fff:		#ffffff;
+	--color-100:		#000000;
+	--color-200:		#ffffff;
+	--color-300:		#ffffff;
+	--color-400:		#ffffff;
+	--color-500:		#ffffff;
+	--color-600:		#ffffff;
+	--color-700:		#ffffff;
+	--color-800:		#ffffff;
+	--color-900:		#ffffff;
+	--color-000:		#ffffff;
+
+	--svg-color: 		#ffffff;
+	--border-color:		#ffffff;
+	--card-color: 		#0e0e0e;
+	--body-color: 		#000000;
+	--white-color: 		#ffffff;
+	--black-color: 		#000000;
+	--sidebar-color:	#fcfcfc;
+
+	--hc-font-color:	#555555;
+	--hc-bg-color:		#f0f0f0;
+
+	--text-color:       #ffffff;
+	
+}
+
+[class="theme-tradewind"]{
+    --primary-color: 	#6aab9c;
+	--secondary-color: 	#f7b36b;
+
+	--chart-color1:	 	#6aab9c;
+	--chart-color2: 	#f7b36b;
+	--chart-color3: 	#97B0AA;
+	--chart-color4: 	#4D6E94;
+	--chart-color5: 	#81A1CA;
+    --chart-color6: 	#ED5782;
+
+	--primary-gradient: linear-gradient(45deg, #608bc2, #65a0a9);
+	--primary-rgb: 106, 171, 156;
+}
+
+[class="theme-monalisa"]{
+    --primary-color: 	#FF7B89;
+	--secondary-color: 	#f7cf79;
+
+    --chart-color1:	 	#ED5782;
+	--chart-color2: 	#e5df88;
+	--chart-color3: 	#726a95;
+	--chart-color4: 	#a6a6a4;
+	--chart-color5: 	#c9b8b8;
+
+    --primary-gradient: linear-gradient(45deg, #b15f85, #e27089);
+    --primary-rgb: 255, 123, 137;
+}
+
+[class="theme-cyan"] {
+	--primary-color: 	#00bdaa;
+	--secondary-color: 	#f1ff17;
+
+	--chart-color1:	 	#00bdaa;
+	--chart-color2: 	#c1c0b9;
+	--chart-color3: 	#537791;
+	--chart-color4: 	#9cbf3b;
+	--chart-color5: 	#cdb60c;
+
+	--primary-gradient: linear-gradient(45deg, #009abd, #00bdaa);
+	--primary-rgb: 0, 189, 170;
+}
+
+[class="theme-indigo"] {
+	--primary-color: 	#484c7f;
+	--secondary-color: 	#d8d419;
+
+	--chart-color1:	 	#484c7f;
+	--chart-color2: 	#d8d419;
+	--chart-color3: 	#7394b9;
+	--chart-color4: 	#79b6bd;
+	--chart-color5: 	#a0c1b8;
+
+	--primary-gradient: linear-gradient(45deg, #5a2ee2, #484c7f);
+	--primary-rgb: 72, 76, 127;
+}
+
+[class="theme-mist"] {
+	// --primary-color: 	#90AfC5;
+	--primary-color:    #163339;
+	--secondary-color: 	#CEA254;
+
+	--chart-color1:	 	#ED5782;
+	--chart-color2: 	#e5df88;
+	--chart-color3: 	#7258db;
+	--chart-color4: 	#a6a6a4;
+	--chart-color5: 	#c9b8b8;
+
+	--primary-gradient: linear-gradient(45deg, #3b6872, #273448);   
+	--primary-rgb: 13, 110, 253;
+}
+
+[class="theme-green"] {
+	--primary-color: 	#7EB93F;
+	--secondary-color: 	#fffb83;
+
+	--chart-color1:	 	#7EB93F;
+	--chart-color2: 	#b9bc6d;
+	--chart-color3: 	#427a5b;
+	--chart-color4: 	#4e7376;
+	--chart-color5: 	#a6a6a4;
+
+	--primary-gradient: linear-gradient(45deg, #92D758, #2f984d);
+	--primary-rgb: 126, 185, 63;
+}
+
+[class="theme-orange"] {
+	--primary-color: 	#feb019;
+	--secondary-color: 	#E39601;
+
+	--primary-rgb: 254, 176, 25;
+
+	--chart-color1:	 	#ef7e56;
+	--chart-color2: 	#44558f;
+	--chart-color3: 	#ded5c4;
+	--chart-color4: 	#f59292;
+	--chart-color5: 	#90a4ae;
+
+	--primary-gradient: linear-gradient(45deg, var(--primary-color), var(--chart-color4));
+	--primary-rgb: 254, 176, 25;
+}
+
+[class="theme-blush"] {
+	--primary-color: 	#ED5782;
+	--secondary-color: 	#ffdd95;
+
+	--chart-color1:	 	#ED5782;
+	--chart-color2: 	#e5df88;
+	--chart-color3: 	#726a95;
+	--chart-color4: 	#a6a6a4;
+	--chart-color5: 	#c9b8b8;
+
+	--primary-gradient: linear-gradient(45deg, #f5ae8a, #ED5782);
+	--primary-rgb: 237, 87, 130;
+}
+
+[class="theme-red"] {
+	--primary-color: 	#ff4560; 
+	--secondary-color: 	#f7c56b;
+
+	--chart-color1:	 	#ff5959;
+	--chart-color2: 	#ffad5a;
+	--chart-color3: 	#4f9da6; 
+	--chart-color4: 	#c06c84;
+	--chart-color5: 	#f67280;
+
+	--primary-gradient: linear-gradient(45deg, #f5558d, #ff4560);
+	--primary-rgb: 255, 69, 96;
+}
+
+[class="theme-dynamic"] {
+	--primary-gradient: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}

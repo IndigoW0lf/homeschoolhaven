@@ -1,0 +1,996 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>::Timetracker:: Documentation </title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"> <!-- Favicon-->
+
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="../assets/plugin/prism/prism.css">
+
+    <!-- project css file  -->
+    <link rel="stylesheet" href="../assets/css/timetracker.style.min.css">
+</head>
+<body>
+    <div id="timetracker-layout" class="theme-mist">  
+
+        <!-- sidebar -->
+        <div class="sidebar px-4 py-4 py-md-5 me-0">
+            <div class="d-flex flex-column h-100">
+                <!-- Logo -->
+                <a href="../index.html" class="mb-0 brand-icon">
+                    <span class="logo-icon">
+                        <i class="icofont-stopwatch fs-2"></i>
+                    </span>
+                    <span class="logo-text">Time-Tracker</span>
+                </a>
+                <!-- Menu: main ul -->
+                <ul class="menu-list flex-grow-1 mt-3">
+                    <li>
+                        <a class="m-link" href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 38 38">
+                                <path xmlns="http://www.w3.org/2000/svg"  d="M34,18.756V34H22v-8h-6v8h-4V14.31l7-3.89L34,18.756z M34,16.472V6h-6v7.139L34,16.472z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M34,14.19V6h-6v2h4v5.08L19,5.86L0.51,16.13l0.98,1.74L19,8.14l17.51,9.73l0.98-1.74L34,14.19z M32,32h-8v-8H14  v8H6V17.653l-2,1.111V34h12v-8h6v8h12V18.764l-2-1.111V32z"></path>
+                            </svg>
+                            <div><h6 class="mb-0">Home</h6><small class="text-muted">Back to Homepage</small></div>
+                        </a>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Authentication" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 38 38">
+                                <rect xmlns="http://www.w3.org/2000/svg"  x="10" y="18" width="24" height="18" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></rect>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M34,36H4V14h6v-3c0-4.962,4.038-9,9-9c4.963,0,9,4.038,9,9v3h6V36z M6,34h26V16H14v-2h12v-3c0-3.86-3.141-7-7-7  c-3.86,0-7,3.14-7,7v5H6V34z M21.829,29.242L19,26.414l-2.829,2.828l-1.414-1.414L17.586,25l-2.828-2.828l1.414-1.414L19,23.586  l2.829-2.828l1.414,1.414L20.415,25l2.828,2.828L21.829,29.242z"></path>
+                            </svg>
+                            <div><h6 class="mb-0">Authentication</h6><small class="text-muted">All AuthPage</small></div><span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span>
+                        </a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="menu-Authentication">
+                            <li><a class="ms-link" href="auth-signin.html"><span>Sign in</span></a></li>
+                            <li><a class="ms-link" href="auth-signup.html"><span>Sign up</span></a></li>
+                            <li><a class="ms-link" href="auth-password-reset.html"><span>Password reset</span></a></li>
+                            <li><a class="ms-link" href="auth-two-step.html"><span>2-Step Authentication</span></a></li>
+                            <li><a class="ms-link" href="auth-404.html"><span>404</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="m-link" href="stater-page.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
+                            <rect xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill:none;;" fill="none"></rect>
+                            <path xmlns="http://www.w3.org/2000/svg"  d="M20,20c0,1.104-0.896,2-2,2H6c-1.104,0-2-0.896-2-2V4c0-1.104,0.896-2,2-2h8l6,6V20z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
+                            <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M11,13h2v2h-2V13z M20,8v12c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h8l0.01,4  c0,1.1,0.891,2,1.99,2H20z M17,11h-2V9h-2v2h-2V9H9v2H7v2h2v2H7v2h2v2h2v-2h2v2h2v-2h2v-2h-2v-2h2V11z"></path>
+                            </svg> 
+                            <div><h6 class="mb-0">Stater Page</h6><small class="text-muted">Start Work With</small></div>
+                        </a>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Components" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
+                                <rect xmlns="http://www.w3.org/2000/svg" class="st2" width="24" height="24" style="fill:none;;" fill="none"></rect>
+                                <path xmlns="http://www.w3.org/2000/svg"   d="M13,1.07V9h7C20,4.92,16.95,1.56,13,1.07z M4,15c0,4.42,3.58,8,8,8s8-3.58,8-8v-4H4V15z   M11,1.07C7.05,1.56,4,4.92,4,9h7V1.07z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M13,1.07V9h7C20,4.92,16.95,1.56,13,1.07z M11,1.07C7.05,1.56,4,4.92,4,9h7V1.07z" style="opacity:0.2;fill:#FFFFFF;;" fill="rgb(255, 255, 255)"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M6,15c-1.66,0-2.491,0.82-2.941,2.418C2.628,18.939,2.625,19.625,1,20.407C1.92,21.38,3.49,22,5,22  c2.21,0,4-1.563,4-3.719C9,16.389,7.66,15,6,15z M21.49,5C20,7,17.96,10.04,16,12c-1.48,1.48-5.48,3.93-5.48,3.93L8.07,13.48  c0,0,2.45-4,3.93-5.48c1.96-1.96,5-4,7-5.48c0.78-0.58,1.8-0.69,2.49,0C22.17,3.2,22.06,4.22,21.49,5z"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M16,12c-1.479,1.48-5.477,3.927-5.477,3.927l-2.449-2.45c0,0,2.445-3.998,3.926-5.477L16,12z"></path>
+                            </svg>
+                            <div><h6 class="mb-0">UI Components</h6><small class="text-muted">BT-5 Components</small></div><span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span>
+                        </a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="menu-Components">
+                            <li><a class="ms-link" href="ui-alerts.html"><span>Alerts</span> </a></li>
+                            <li><a class="ms-link" href="ui-badge.html"><span>Badge</span></a></li>
+                            <li><a class="ms-link" href="ui-breadcrumb.html"><span>Breadcrumb</span></a></li>
+                            <li><a class="ms-link" href="ui-buttons.html"><span>Buttons</span></a></li>
+                            <li><a class="ms-link" href="ui-card.html"><span>Card</span></a></li>
+                            <li><a class="ms-link" href="ui-carousel.html"><span>Carousel</span></a></li>
+                            <li><a class="ms-link" href="ui-collapse.html"><span>Collapse</span></a></li>
+                            <li><a class="ms-link" href="ui-dropdowns.html"><span>Dropdowns</span></a></li>
+                            <li><a class="ms-link" href="ui-listgroup.html"><span>List group</span></a></li>
+                            <li><a class="ms-link" href="ui-modal.html"><span>Modal</span></a></li>
+                            <li><a class="ms-link" href="ui-navs.html"><span>Navs</span></a></li>
+                            <li><a class="ms-link" href="ui-navbar.html"><span>Navbar</span></a></li>
+                            <li><a class="ms-link" href="ui-pagination.html"><span>Pagination</span></a></li>
+                            <li><a class="ms-link" href="ui-popovers.html"><span>Popovers</span></a></li>
+                            <li><a class="ms-link" href="ui-progress.html"><span>Progress</span></a></li>
+                            <li><a class="ms-link" href="ui-scrollspy.html"><span>Scrollspy</span></a></li>
+                            <li><a class="ms-link" href="ui-spinners.html"><span>Spinners</span></a></li>
+                            <li><a class="ms-link" href="ui-toasts.html"><span>Toasts</span></a></li>
+                            <li><a class="ms-link" href="ui-tooltips.html"><span>Tooltips</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="m-link active" href="documentation.html">
+                            <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 32 32">
+                                <path xmlns="http://www.w3.org/2000/svg"   d="M25.5,9.78V28.5c0,0.56-0.44,1-1,1h-17c-0.56,0-1-0.44-1-1v-25c0-0.55,0.45-1,1-1h10.72  L25.5,9.78z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M19.5,9.5c-0.561,0-1-0.439-1-1V2.793L25.207,9.5H19.5z"></path>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M19,16c0-2.65,0.54-4,2-4c0.98,0,1.7,0.63,2,1.83l-0.89,0.6C21.92,13.49,21.43,13,21,13c-0.62,0-1,1.01-1,3  s0.38,3,1,3c0.43,0,0.92-0.49,1.11-1.43l0.89,0.6c-0.3,1.2-1.02,1.83-2,1.83C19.54,20,19,18.65,19,16z M18,16c0,3-0.9,4-2,4  c-1.1,0-2-1-2-4s0.9-4,2-4C17.1,12,18,13,18,16z M17,16c0-0.7,0-3-1-3s-1,2.3-1,3s0,3,1,3S17,16.7,17,16z M13,16.04  c0,2.88-0.8,3.96-2.4,3.96C9.8,20,9,20,9,20v-8c0,0,0.8,0,1.6,0C12.2,12,13,13.15,13,16.04z M12,16.03c0-2.17-0.52-3.03-1.33-3.03  c-0.4,0-0.67,0-0.67,0v6c0,0,0.27,0,0.67,0C11.48,19,12,18.2,12,16.03z M26,10v18.5c0,0.828-0.672,1.5-1.5,1.5h-17  C6.672,30,6,29.328,6,28.5v-25C6,2.672,6.672,2,7.5,2H18c0.621,0,0.646,0.232,1,0.586L25.414,9C25.768,9.354,26,9.368,26,10z   M19,8.5C19,8.776,19.224,9,19.5,9c0,0,2.639,0,4.5,0l-5-5V8.5z M25,10h-5.5C18.672,10,18,9.328,18,8.5V3c0,0-9.5,0-10.5,0  C7.225,3,7,3.224,7,3.5v25C7,28.776,7.225,29,7.5,29h17c0.275,0,0.5-0.224,0.5-0.5C25,28,25,10,25,10z"></path>
+                            </svg>
+                            <div><h6 class="mb-0">Documentation</h6><small class="text-muted">How to Install</small></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="m-link" href="changelog.html">
+                            <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
+                                <rect xmlns="http://www.w3.org/2000/svg"  width="24" height="24" fill="none"></rect>
+                                <polygon xmlns="http://www.w3.org/2000/svg" class="st0"  points="22,6 22,12 20,12 20,9.42 13,16.41 8.95,12.36 2.65,17.76 1.35,16.24 9.05,9.64   13,13.59 18.58,8 16,8 16,6 "></polygon>
+                                <polygon xmlns="http://www.w3.org/2000/svg" class="st4" points="11.91,12.5 10.58,13.99 8.95,12.36 2.65,17.76 1.35,16.24 9.05,9.64"></polygon>
+                            </svg>
+                            <div><h6 class="mb-0">Changelog</h6><small class="text-muted">Changelog Update</small></div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Menu: menu collepce btn -->
+                <button type="button" class="btn btn-link sidebar-mini-btn text-muted">
+                    <span><i class="icofont-bubble-right"></i></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- main body area -->
+        <div class="main px-lg-4 px-md-4 doc">
+
+            <!-- Body: Header -->
+            <div class="body-header border-bottom d-flex py-3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <!-- Pretitle -->
+                            <h1 class="h4 mt-1">Documentation</h1>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://themeforest.net/user/pixelwibes" title="Download" target="_blank" class="btn btn-white border lift">Download</a>
+                            <a href="../index.html" title="" class="btn btn-dark lift">Go to Dashboard</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Body: Body -->
+            <div class="body d-flex py-lg-4 py-3">
+                <div class="container">
+                    
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card" style="font-size: 16px;">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-thumbs-up me-2"></i>Getting Started</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>This guide will help you get started with <strong class="text-secondary">timetracker</strong>! All the important stuff –&nbsp;compiling the source, file structure, build tools, file includes –&nbsp;is documented here, but should you have any questions, always feel free to reach out to <span class="text-muted">pixelwibes@gmail.com</span></p>
+                                    <p>If you really like our work, design, performance and support then <a href="https://themeforest.net/downloads"> please don't forgot to rate us</a> on Themeforest,<br> it really motivate us to provide something better.
+                                        <span class="ms-2">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </span>
+                                    </p>
+                                    <p class="mb-0"><strong>Please Note :</strong></p> 
+                                    <p>- All images are just used for Preview Purpose Only. They are not part of the template and NOT included in the final purchase files.</p>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: Getting Started -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-code me-2"></i>Installation Setup</h5>
+                                </div>
+                            
+                                <div class="card-body">
+                                    <p><strong>First, Have to check your Local environment(Your Computer) Node & Grunt installed or not?</strong></p>
+                                    <div class="card-body">
+                                        <p>If not installed Node & Grunt in your Local environment(Your Computer) the following steps.</p>
+                                        <ul>
+                                            <li>Node install <a href=" https://nodejs.org/en/download/" class="text-secondary">https://nodejs.org/en/download/</a></li>
+                                            <li>open your cmd and apply the three commands.
+                                                <ul>
+                                                    <li>npm install -g grunt-cli</li>
+                                                    <li>npm install grunt --save-dev  </li>
+                                                    <li>npm install grunt-contrib-jshint --save-dev</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <p>If you install in your local environment(Your Computer) the following step.</p>
+                                        <ul>
+                                            <li>First go to the HTML folder.</li>
+                                            <li>Open cmd (like path is C:\pixelwibes\timetracker\html> )</li>
+                                            <li>apply command:  npm i (Node install purpose)</li>
+                                            <li>apply command:  grunt sass (Scss to CSS convert purpose)</li>
+                                            <li>apply command:  grunt uglify (jquery compile and convert to bundle)</li>
+                                        </ul>
+                                    </div>
+                                    <p><strong>More Inforamtion About Setup:</strong></p>
+                                    <ol style="line-height: 30px;">
+                                        <li><strong>Installing Grunt:</strong> Run <code>npm install grunt --save-dev</code> command from your teminal to install grunt within your project.</li>
+                                        <li><strong>Grunt Sass:</strong> Run <code>grunt sass</code> command from your project directory. It will compile SASS to CSS for the project. This will read the file `scss/filename.scss` and output a plain-css file to `dist/assets/css/filename.css`. </li>
+                                        <li><strong>Grunt JSHint:</strong> Run <code>grunt jshint</code> command from your project directory. It will checks all *.js files under `assetsjs/filename` for common syntax or coding errors using the JSHint utility.</li>
+                                        <li><strong>Grunt Sprite:</strong> Run <code>grunt sprite</code> command from your project directory. </li>
+                                        <li><strong>Further help:</strong> To get more help on the grunt checkout <a href="https://gruntjs.com/getting-started">Grunt</a></li>
+                                        <li><strong>Note:</strong> However, any SASS code you write must be able compile via Grunt as well.It will generate pre-compiled javascript templates. Reads all the *.html files from `assets/js/filename` and outputs `assets/js/filename.templates.js`. Template.js will contains code of UI design and will be change each time you build solution through above command.</li>
+                                    </ol>
+                                    <p><a href="https://gruntjs.com/" target="_blank"><strong>Grunt</strong></a> is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting. It uses a command-line interface to run custom tasks defined in a file.</p>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: Dev Setup -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-folder me-2"></i>File Structure</h5>
+                                </div>
+                            
+                                <div class="card-body">
+                                    <ul style="line-height: 28px;">
+                                        <li>
+                                            <strong><i class="icofont-folder text-secondary me-2"></i>Documentation</strong> <span class="text-muted">- Project documentation</span>
+                                            <ul class="mb-3">
+                                                <li>
+                                                    <strong><i class="icofont-folder-open text-secondary me-2"></i>assets</strong>
+                                                    <ul class="mb-3">
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>css</strong> <span class="text-muted">- Compiled CSS file</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>fonts</strong> <span class="text-muted">- Icon font and font awesome </span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>images</strong> <span class="text-muted">- Image assets</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>js</strong> <span class="text-muted">-  Compiled JS file</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>plugin</strong> <span class="text-muted">- plugins JS and css file</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong><i class="icofont-file-code color-light-orange me-2"></i>index.html</strong> <span class="text-muted">- well project document</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><i class="icofont-folder text-secondary me-2"></i>One-page</strong> <span class="text-muted">- Front End Html Page Option</span>
+                                            <ul class="mb-3">
+                                                <li>
+                                                    <strong><i class="icofont-folder-open text-secondary me-2"></i>dist</strong>
+                                                    <ul>
+                                                        <li>
+                                                            <strong><i class="icofont-folder-open text-secondary me-2"></i>assets</strong>
+                                                            <ul class="mb-3">
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>css</strong> <span class="text-muted">- Compiled CSS file</span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>fonts</strong> <span class="text-muted">- Icon font and font awesome </span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>images</strong> <span class="text-muted">- Image assets</span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>plugin</strong> <span class="text-muted">- plugins JS and css file</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><strong><i class="icofont-file-code color-light-orange me-2"></i>index-one.html</strong> <span class="text-muted">- Front End page option one</span></li>
+                                                        <li><strong><i class="icofont-file-code color-light-orange me-2"></i>index-two.html</strong> <span class="text-muted">- Front End page option two</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>js</strong> <span class="text-muted">- JS file</span></li>
+                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>Scss</strong> <span class="text-muted">- SCSS source for Front End Pages</span></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><i class="icofont-folder text-secondary me-2"></i>Html</strong> <span class="text-muted">- Admin Template Project Html</span>
+                                            <ul class="mb-3">
+                                                <li>
+                                                    <strong><i class="icofont-folder-open text-secondary me-2"></i>dist</strong> <span class="text-muted">- Generated production files</span>
+                                                    <ul class="mb-3">
+                                                        <li>
+                                                            <strong><i class="icofont-folder-open text-secondary me-2"></i>assets</strong>
+                                                            <ul class="mb-3">
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>bundles</strong> <span class="text-muted">- Bundling plugins JS file</span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>css</strong> <span class="text-muted">- Compiled CSS</span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>fonts</strong> <span class="text-muted">- Icon font and font awesome </span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>images</strong> <span class="text-muted">- Image assets</span></li>
+                                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>plugin</strong> <span class="text-muted">- plugins JS and css file</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <strong><i class="icofont-folder-open text-secondary me-2"></i>ui-elements</strong><span class="text-muted">- Ui-Elements using Customized app</span>
+                                                            <ul class="mb-3">
+                                                                <li><strong><i class="icofont-file-code color-light-orange me-2"></i>Index.html</strong> <span class="text-muted">- All Html file like Authentication,UI Components,Changelog etc... </span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <strong><i class="icofont-file-code color-light-orange  me-2"></i>Index.html</strong><span class="text-muted">-timetracker Html Template</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <strong><i class="icofont-folder text-secondary me-2"></i>js</strong> <span class="text-muted">- Javascript source</span>
+                                                    <ul class="mb-3">
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>page</strong> <span class="text-muted">- Page js file</span></li>
+                                                        <li><strong><i class="icofont-file-code text-secondary me-2"></i>template</strong> <span class="text-muted">- Common js file</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong><i class="icofont-folder text-secondary me-2"></i>node_modules</strong> <span class="text-muted">- NPM dependencies (by default the folder is not included) <code>npm</code> installs dependencies. </span></li>
+                                                <li>
+                                                    <strong><i class="icofont-folder-open text-secondary me-2"></i>scss</strong> <span class="text-muted">- SCSS source for theme</span>
+                                                    <ul class="mb-3">
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>bootstrap</strong> <span class="text-muted">- Custom bootstrap components</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>generic</strong> <span class="text-muted">- Animation, Helpers class</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>global</strong> <span class="text-muted">- variables, themes, mixins</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>plugin</strong> <span class="text-muted">- all plugin scss file</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>skeleton</strong> <span class="text-muted">- layout separate file</span></li>
+                                                        <li><strong><i class="icofont-folder text-secondary me-2"></i>widgets</strong> <span class="text-muted">- All widgets file</span></li>
+                                                        <li><strong><i class="icofont-file-code color-light-orange  me-2"></i>main.scss</strong> <span class="text-muted">- Project main scss file</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong><i class="icofont-file-code color-light-orange  me-2"></i>Gruntfile.js</strong> <span class="text-muted">- All the build commands</span></li>
+                                                <li><strong><i class="icofont-file-code color-light-orange  me-2"></i>package.json</strong> <span class="text-muted">- List of dependencies and npm information</span></li>
+                                                <li><strong><i class="icofont-file-code color-light-orange  me-2"></i>.gitignore</strong> <span class="text-muted">- Hide all unnecessary files from Git</span></li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div> <!-- Doc: File Structure -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-layout me-2"></i>Create Layouts help class</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3 row-cols-1 row-cols-lg-2">
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Default Sidebar Layout Setting</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sidebar<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+Toggle class in sidebar <code>.sidebar</code>
+</div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Mini Sidebar Layout Setting</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sidebar sidebar-mini<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+Toggle class in sidebar <code>.sidebar-mini</code>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Font Setting</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font-Plex<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+<code>.font-poppins</code>, <code>.font-opensans</code>, <code>.font-montserrat</code>, <code>.font-Plex</code>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>RTL Mode</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rtl_mode<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+Toggle class in Body tage <code>.rtl_mode</code>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Sidebar Gradient</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sidebar gradient<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+Toggle class in sidebar <code>.gradient</code>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Light/Dark &amp; High Contrast</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>no-js <span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span> <span class="token attr-name">data-theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+Change class in HTML tage <code>.light</code>, <code>.dark</code>, &amp; <code>.high-contrast</code>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="color-bg-200 p-3">
+                                            <h6>Theme Color Settings</h6>
+<pre class=" language-html" data-lang="html" style="margin: 0; padding: 0; background: transparent !important;"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>theme-blue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+<code>.theme-tradewind</code>,
+<code>.theme-monalisa</code>,
+<code>.theme-cyan</code>,
+<code>.theme-indigo</code>,
+<code>.theme-blue</code>,
+<code>.theme-green</code>,
+<code>.theme-orange</code>,
+<code>.theme-blush</code>,
+<code>.theme-red</code>,
+<code>.theme-dynamic</code>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: layout view -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-gear me-2"></i>Setting info</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-4">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="theme-setting">
+                                                        <h6 class="fw-bold"> Template Color Settings</h6>
+                                                        <p>There are 9 Color option template available here. just simple select your favorite color options.also sidebar gradient colorsidebar gradient color option available. just simple gradient swich on. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="theme-setting">
+                                                        <h6 class="fw-bold"> Dyanamic color setting</h6>
+                                                        <p>You can set your own primary colors and secondary colors also set chart color options available.just simply set your own color. click in the color box to open the color picker and choose your color</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="theme-setting">
+                                                        <h6 class="fw-bold"> Google Font setting</h6>
+                                                        <p>There are 4 google font options. just simply select the fonts option</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="theme-setting">
+                                                        <h6 class="fw-bold mb-3">Light/Dark & Contrast Layout </h6>
+                                                        <p><strong>Light:</strong>  By Default Light Color Layout Template Selected  </p>
+                                                        <p><strong>Dark:</strong>  Enable Dark Mode Swich On. </p>
+                                                        <p><strong>High Contrast:</strong>  Enable High Contrast Mode Swich On. </p>
+                                                        <p><strong>RTL:</strong>  Enable RTL Mode Swich On. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="theme-setting">
+                                                        <h6 class="fw-bold mb-3">High Contrast Themefor better accessibility </h6>
+                                                        <p>timetracker has a pre-built High contrast theme for improving accessibility.</p>
+                                                        <p> If you follow the standard of timetracker, the High contrast theme will be applied to all timetracker elements, regardless of whether they are charts or labels.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Doc: Setting info -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-paint-brush me-2"></i>Comman Utilities With Custom Class</h5>
+                                </div>
+                                <div class="card-header">
+                                    <h5 class="fw-bold">Text Color</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered  doc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Class</th>
+                                                <th>Results</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>.text-primary</code></td>
+                                                <td class="text-primary">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-secondary</code></td>
+                                                <td class="text-secondary">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-success</code></td>
+                                                <td class="text-success">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-info</code></td>
+                                                <td class="text-info">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-warning</code></td>
+                                                <td class="text-warning">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-danger</code></td>
+                                                <td class="text-danger">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.text-dark</code></td>
+                                                <td class="text-dark">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.color-lightyellow</code></td>
+                                                <td class="color-lightyellow">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.color-lightblue</code></td>
+                                                <td class="color-lightblue">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.color-light-success</code></td>
+                                                <td class="color-light-success">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.color-light-orange</code></td>
+                                                <td class="color-light-orange">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.color-careys-pink</code></td>
+                                                <td class="color-careys-pink">Lorem ipsum dolor sit amet consectecur.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-header">
+                                    <h5 class="fw-bold">Background Color</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered doc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Class</th>
+                                                <th>Results</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>.bg-primary</code></td>
+                                                <td class="bg-primary"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-secondary</code></td>
+                                                <td class="bg-secondary"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-success</code></td>
+                                                <td class="bg-success"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-info</code></td>
+                                                <td class="bg-info"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-warning</code></td>
+                                                <td class="bg-warning"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-danger</code></td>
+                                                <td class="bg-danger"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-dark</code></td>
+                                                <td class="bg-dark"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-white</code></td>
+                                                <td class="bg-white"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-lightyellow</code></td>
+                                                <td class="bg-lightyellow"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-lightblue</code></td>
+                                                <td class="bg-lightblue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.bg-careys-pink</code></td>
+                                                <td class="bg-careys-pink"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.light-success-bg</code></td>
+                                                <td class="light-success-bg"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>.light-orange-bg </code></td>
+                                                <td class="light-orange-bg"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!-- Doc: Comman Utilities -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-paint me-2"></i>Layouts Components</h5>
+                                    <p class="text-muted">Comman Components Easy to customize by developer</p>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-md-12">
+                                        <div class="card-header">
+                                            <h5 class="fw-bold">Button</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="bd-example">
+                                                <button type="button" class="btn btn-primary">Primary</button>
+                                                <button type="button" class="btn btn-secondary">Secondary</button>
+                                                <button type="button" class="btn btn-success">Success</button>
+                                                <button type="button" class="btn btn-danger">Danger</button>
+                                                <button type="button" class="btn btn-warning">Warning</button>
+                                                <button type="button" class="btn btn-info">Info</button>
+                                                <button type="button" class="btn btn-light">Light</button>
+                                                <button type="button" class="btn btn-dark">Dark</button>
+                                                
+                                                <button type="button" class="btn btn-link">Link</button>
+        <pre>
+        <code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;</code>
+        </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="card-header">
+                                            <h5 class="fw-bold">Navbar</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="bd-example">
+                                                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+                                                    <div class="container-xxl">
+                                                        <a class="navbar-brand" href="#">Navbar</a>
+                                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                            <span class="navbar-toggler-icon"></span>
+                                                        </button>
+                                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                                                                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                                                                <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Dropdown
+                                                                    </a>
+                                                                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
+                                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                        <li><hr class="dropdown-divider"></li>
+                                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" >Disabled</a></li>
+                                                            </ul>
+                                                            <form class="d-flex">
+                                                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </nav>
+        <pre class="language-html m-0" data-lang="html">
+        <code>&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+            &lt;div class=&quot;container-xxl&quot;&gt;
+                &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav me-auto mb-2 mb-lg-0&quot;&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;nav-item dropdown&quot;&gt;
+                            &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;navbarDropdown&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                                Dropdown
+                            &lt;/a&gt;
+                            &lt;ul class=&quot;dropdown-menu border-0 shadow&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;
+                                &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;hr class=&quot;dropdown-divider&quot;&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;form class=&quot;d-flex&quot;&gt;
+                        &lt;input class=&quot;form-control me-2&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;
+                        &lt;button class=&quot;btn btn-outline-success&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;</code>
+        </pre>
+                                            </div> <!-- example end  -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="card-header">
+                                            <h5 class="fw-bold">Breadcrumb</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="bd-example">
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb p-2">
+                                                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                                    </ol>
+                                                </nav>
+                                                
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb p-2">
+                                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                                    </ol>
+                                                </nav>
+                                                
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb p-2">
+                                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                                    </ol>
+                                                </nav>
+                    <pre>
+                    <code class="language-html" data-lang="html">&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+                        &lt;ol class=&quot;breadcrumb&quot;&gt;
+                            &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Home&lt;/li&gt;
+                        &lt;/ol&gt;
+                    &lt;/nav&gt;
+                    
+                    &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+                        &lt;ol class=&quot;breadcrumb&quot;&gt;
+                            &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Library&lt;/li&gt;
+                        &lt;/ol&gt;
+                    &lt;/nav&gt;
+                    
+                    &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+                        &lt;ol class=&quot;breadcrumb&quot;&gt;
+                            &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Data&lt;/li&gt;
+                        &lt;/ol&gt;
+                    &lt;/nav&gt;</code>
+                    </pre>
+                                            </div> <!-- example end  -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="card-header">
+                                            <h5 class="fw-bold">Card</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="bd-example">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                        <a href="#" class="card-link">Card link</a>
+                                                        <a href="#" class="card-link">Another link</a>
+                                                    </div>
+                                                </div>
+                <pre>
+                <code class="language-html" data-lang="html">&lt;div class=&quot;card&quot; style=&quot;width: 18rem;&quot;&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Card title&lt;/h5&gt;
+                        &lt;h6 class=&quot;card-subtitle mb-2 text-muted&quot;&gt;Card subtitle&lt;/h6&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;Card link&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;Another link&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</code>
+                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: Layouts Components -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-flag-alt-2 me-2"></i>Advantages </h5>
+                                </div>
+                            
+                                <div class="card-body">
+                                    <ul style="line-height: 30px; font-size: 16px;">
+                                        <li>Very easy access to any starters components and core settings from anywhere in the template.</li>
+                                        <li>Intuitive clear architecture.</li>
+                                        <li>Avoiding the probabilities of conflicts between Front codes and third party plugins (libraries).</li>
+                                        <li>Creation of wrapper components simply solves complicated initializations structures for the users.</li>
+                                        <li>Everything is structured, each component in its own file and in its component in the main object.</li>
+                                        <li>The ability of extending functionality without affecting the behavior of the core object and not changing the existing functionality.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- Doc:timetracker Advantages  -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-diamond me-2"></i>timetracker Template Credit</h5>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Google font</td>
+                                                    <td><a href="https://fonts.google.com/">https://fonts.google.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bootstrap</td>
+                                                    <td><a href="https://v5.getbootstrap.com/">https://v5.getbootstrap.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jquery</td>
+                                                    <td><a href="https://jquery.com/">https://jquery.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SASS</td>
+                                                    <td><a href="https://sass-lang.com/">https://sass-lang.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grunt</td>
+                                                    <td><a href="https://gruntjs.com/">https://gruntjs.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NPM</td>
+                                                    <td><a href="https://www.npmjs.com/">https://www.npmjs.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fontawesome</td>
+                                                    <td><a href="https://fontawesome.com/v4.7.0/">https://fontawesome.com/v4.7.0/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Icon Font</td>
+                                                    <td><a href="https://icofont.com/icons">https://icofont.com/icons</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Apex Charts</td>
+                                                    <td><a href="https://apexcharts.com/">https://apexcharts.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sparkline Charts</td>
+                                                    <td><a href="https://omnipotent.net/jquery.sparkline/#s-about">https://omnipotent.net/jquery.sparkline/#s-about</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fullcalendar</td>
+                                                    <td><a href="https://fullcalendar.io/">https://fullcalendar.io/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pexels</td>
+                                                    <td><a href="https://www.pexels.com/">https://www.pexels.com/</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tradingview</td>
+                                                    <td><a href="https://in.tradingview.com/widget/advanced-chart/">https://in.tradingview.com/widget/advanced-chart/</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: Template Credit  -->
+
+                        <div class="col-12">
+                            <div class="mb-3 pt-3 card">
+                                <div class="card-header">
+                                    <h5 class="fw-bold"><i class="icofont-love me-2"></i>THANK YOU!</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mt-2">
+                                        <div class="col-xl-8 col-lg-8 col-md-12">
+                                            <div class="card overflow-hidden mb-3">
+                                                <div class="bg-primary py-5 px-4 text-light">
+                                                    <h4>pixelwibes.com</h4>
+                                                    <span class="small">Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template.
+                                                        If you really like our work, design, performance and support then <a class="text-warning" href="https://themeforest.net/downloads"> please don't forgot to rate us</a> on Themeforest, it really motivate us to provide something better.</span>
+                                                </div>
+                                                <div class="p-4">
+                                                    <h6>Customize Code and Devlopment</h6>
+                                                    <span>We Can provide Bunch of Services to Customize Template According To Your Requirements</span>
+                                                    <div class="mt-4 mb-2">
+                                                        <a href="http://www.pixelwibes.com" target="_blank" class="btn btn-primary">Hire Us</a>
+                                                    </div>
+                                                    <div class="dividers-block"></div>
+                                                    <h6>timetracker guide</h6>
+                                                    <span>Get started withtimetracker Business and learn about features for admins and users.</span>
+                                                    <div class="mt-4 mb-2">
+                                                        <a href="http://pixelwibes.com/" class="btn btn-primary">Check out the guide</a>
+                                                    </div>
+                                                    <div class="dividers-block"></div>
+                                                    <h6>Get answers</h6>
+                                                    <span>Visit the help centre for answers to common issues.</span>
+                                                    <div class="mt-4 mb-2">
+                                                        <a href="http://pixelwibes.com/" class="btn btn-primary">Go to Help Centre</a>
+                                                    </div>
+                                                    <div class="dividers-block"></div>
+                                                    <span class="text-muted">Thanks for choosing <strong class="text-warning">Pixel Wibes</strong> Admin.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-12">
+                                            <div class="card bg-info-light mb-3">
+                                                <div class="card-body d-flex align-items-center justify-content-center flex-column">
+                                                    <div class="preview-pane text-center">
+                                                        <svg width="100" fill="currentColor" class="bi bi-chat-text color-defult " viewBox="0 0 16 16">
+                                                            <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                                                            <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                                        </svg>
+                                                        <a href="http://pixelwibes.com/" class="fw-bold fs-6 mt-2 d-flex justify-content-center color-defult ">Chat with us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-lightyellow">
+                                                <div class="card-body d-flex align-items-center justify-content-center flex-column">
+                                                    <div class="preview-pane text-center">
+                                                        <svg width="100" fill="currentColor" class="bi bi-envelope color-defult " viewBox="0 0 16 16">
+                                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                                        </svg>
+                                                        <a href="mailto:pixelwibes@gmail.com" class="fw-bold  fs-6 mt-2 d-flex justify-content-center color-defult ">Email us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Doc: THANK YOU!  -->
+                    </div> <!-- .row end -->
+
+                </div>
+            </div>
+
+            <!-- Body: Footer -->
+            <div class="body-footer">
+                <div class="container">
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col">
+                                        <p class="font-size-sm mb-0">©timetracker. <span class="d-none d-sm-inline-block">2022 Pixelwibes.</span></p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="d-flex justify-content-end">
+                                            <!-- List Dot -->
+                                            <ul class="list-inline mb-0">
+                                                <li class="list-inline-item">
+                                                    <a class="list-separator-link" href="http://pixelwibes.com/">About</a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="list-separator-link" href="http://pixelwibes.com/">Hire us</a>
+                                                </li>
+                                            </ul>
+                                            <!-- End List Dot -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+
+    <!-- Prism js file please do not add in your project -->
+    <script src="../assets/plugin/prism/prism.js"></script>
+
+    <!-- Jquery Page Js -->
+    <script src="../../js/template.js"></script>
+</body>
+</html>

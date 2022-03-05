@@ -1,0 +1,38 @@
+// Bootstrap v5.0.2
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// Global
+@import "../scss/global/fonts"; 
+@import "../scss/global/themes";
+@import "../scss/global/variables";
+@import "../scss/global/mixins";
+@import "../scss/global/general";
+@import "../scss/global/rtl-mode";
+
+// Dynamic Color scss
+@import "../dist/assets/plugin/colorpicker/colorpicker.min.scss";
+
+// Custom Bootstrap Components
+@import "../scss/bootstrap/custom";
+
+// Generic
+@import "../scss/generic/helpers";
+@import "../scss/generic/animate";
+@import "../scss/generic/setting-bar";
+
+// Skeleton
+@import "../scss/skeleton/timetracker-layout";
+
+// Plugin scss
+@import "../scss/plugin/calendar";
+@import "../scss/plugin/chat";
+@import "../scss/plugin/taskbord";  
+@import "../scss/plugin/timeline";
+@import "../scss/plugin/datatable";
+@import "../scss/plugin/charts";
+@import "../scss/plugin/wizard"; 
+
+// Application widgets
+@import "../scss/widgets/card";
+

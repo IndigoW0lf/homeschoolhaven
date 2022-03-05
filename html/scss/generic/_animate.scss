@@ -1,0 +1,136 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+// dropdown-menu
+.dropdown-animation{
+	opacity: 0;
+	transform: translateY(15px);
+	-webkit-animation: eliment-animation .2s ease-in-out .33333s;
+	animation: eliment-animation .2s ease-in-out .33333s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-delay: .05s;
+			animation-delay: .05s;
+}
+
+@-webkit-keyframes eliment-animation{to{opacity:1;transform:translateX(0)}}
+@keyframes eliment-animation{to{opacity:1;transform:translateX(0)}}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.lift{
+	transition: box-shadow .25s ease,
+	transform .25s ease;
+
+	&:focus,
+	&:hover{
+		box-shadow: 0 6px 1rem rgba($dark,.1),0 .5rem 1rem -.75rem rgba($dark,.1)!important;
+		transform: translate3d(0,-3px,0)
+	}
+}
+
+.slidedown{
+	@include transition(all .3s ease 0s);
+	visibility: hidden;
+	opacity: 0;
+	transform-origin: 0 0 0;
+	transform: scaleY(0);
+
+	&.show,
+	&.open{
+		opacity: 1;
+		visibility: visible;
+		transform: scaleY(1);
+	}
+
+	.dropdown-menu{
+		@include transition(all .3s ease 0s);
+		display: block;
+		visibility: hidden;
+		top: 100%;
+		z-index: 999;
+		opacity: 0;
+		transform-origin: 0 0 0;
+		transform: scaleY(0);
+
+		&.show{
+			visibility: visible;
+			transform: scaleY(1);
+			top: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.pulse {
+    .pulse-ring {
+        border-color: var(--primary-color);
+        display: block;
+        position: absolute;
+        -webkit-animation: animation-pulse 3.5s ease-out;
+        animation: animation-pulse 3.5s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        border-style: solid;
+        top: -5px;
+        left: 4px;
+        border-radius: 45px;
+        height: 45px;
+        width: 45px;
+        opacity: 0;
+        border-width: 5px;
+    }
+
+    &::after{
+        display: none;
+    }
+
+    @-webkit-keyframes animation-pulse {
+        0% {
+            -webkit-transform: scale(0.1, 0.1);
+            opacity: 0.0; 
+        }
+        60% {
+            -webkit-transform: scale(0.1, 0.1);
+            opacity: 0.0;
+        }
+        65% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.2, 1.2);
+            opacity: 0.0;
+        }
+    }
+      
+    @keyframes animation-pulse {
+        0% {
+            -webkit-transform: scale(0.1, 0.1);
+            opacity: 0.0;
+        }
+        60% {
+            -webkit-transform: scale(0.1, 0.1);
+            opacity: 0.0;
+        }
+        65% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.2, 1.2);
+            opacity: 0.0;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+/*
+* Admin Layout (timetracker)
+* @author: Pixelwibes
+* @design by: Pixelwibes.
+* @event-namespace:timetracker
+* Copyright 2022 Pixelwibes
+*/
+.choose-skin {
+    li {
+        position: relative;
+        cursor: pointer;
+        font-size: 11px;
+        &:last-child{
+            margin-right: 0px;
+        }
+        &.active {
+            &:after {
+                font-family: IcoFont;
+                font-style: normal;
+                content: '\eed6';
+                position: absolute;
+                font-size: 30px;
+                top: -7px;
+                left: 5px;
+                color: #fff;
+            }
+            .dynamic{
+                background: var(--primary-color);
+                color: $white;
+            }
+        }
+
+        div {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 14px;
+            border-radius: 5px;
+        }
+
+        span {
+            position: relative;
+            bottom: 7px;
+            left: 5px;
+        }
+    }
+
+    @each $key, $val in $c_colors {
+        .#{$key} {
+            background-color: $val;
+        }
+    }
+}
+
+.custom_setting{
+    .dynamic-block{
+        .choose-skin {
+            li {
+                background-color: var(--primary-color);
+                color:$white;
+                border-radius: .25rem;
+                font-size: 16px;
+                &.active {
+                    .dynamic{
+                        background-color: var(--secondary-color);
+                    }
+                    &:after{
+                        content: '';
+                    }
+                }
+                div {
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    
+}
+
+.colorpicker{
+    z-index: 99999 !important;
+}
+
+.theme-dynamic{
+    .dt-setting{
+        display: block;
+    }    
+}
+.dt-setting{
+    display: none;
+}
+
+.setting-list,
+.layout_setting{
+    li{
+        margin-bottom: 15px;
+    }
+}
+
+.rtl_mode{
+    .right-sidebar{
+        left: -300px;
+        right: auto;
+        &.open{
+            left: 0;
+            right: auto;
+        }
+    }
+}
