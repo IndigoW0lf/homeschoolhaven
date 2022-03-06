@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>::Timetracker::  Admin Profile </title>   
+    <title>::Timetracker::Employee Logs</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css">
     <!-- project css file  -->
     <link rel="stylesheet" href="assets/css/timetracker.style.min.css">
 </head>
 <body>
     <div id="timetracker-layout" class="theme-mist">
-        
+
         <!-- sidebar -->
         <div class="sidebar px-4 py-4 py-md-5 me-0">
             <div class="d-flex flex-column h-100">
@@ -28,15 +30,15 @@
                 <ul class="menu-list flex-grow-1 mt-3">
                     <li><a class="m-link" href="index.html"><i class="icofont-home fs-5"></i> <span>Dashboard</span></a></li>
                     <li class="collapsed">
-                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-report" href="#">
+                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#menu-report" href="#">
                             <i class="icofont-chart-pie fs-5"></i><span>Reports</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
-                        <ul class="sub-menu collapse" id="menu-report">
+                        <ul class="sub-menu collapse show" id="menu-report">
                             <li><a class="ms-link" href="attendance.html">Attendance</a></li>
                             <li><a class="ms-link" href="hourstrack.html">Hours Tracked</a></li>
                             <li><a class="ms-link" href="timeline.html">Timeline</a></li>
-                            <li><a class="ms-link" href="employee-logs.html">Employee Logs</a></li>
+                            <li><a class="ms-link active" href="employee-logs.html">Employee Logs</a></li>
                         </ul>
                     </li>
                     <li><a class="m-link" href="screencasts.html"><i class="icofont-computer fs-5"></i> <span>Screencasts</span></a></li>
@@ -89,15 +91,15 @@
                         </ul>
                     </li>
                     <li class="collapsed">
-                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#widget" href="#">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#widget" href="#">
                             <i class="icofont-code fs-5"></i><span>Widget</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
-                        <ul class="sub-menu collapse show" id="widget">
+                        <ul class="sub-menu collapse" id="widget">
                             <li><a class="ms-link" href="widget-example.html">Widget Example</a></li>
                             <li><a class="ms-link" href="apexchart.html">Apex Chart</a></li>
                             <li><a class="ms-link" href="priceplan.html"> Price Plan</a></li>
-                            <li><a class="ms-link active" href="profile.html"> Profile Page</a></li>
+                            <li><a class="ms-link" href="profile.html"> Profile Page</a></li>
                             <li><a class="ms-link" href="table.html"> Tables</a></li>
                         </ul>
                     </li>   
@@ -112,7 +114,7 @@
         </div>  
 
         <!-- main body area -->
-        <div class="main px-lg-4 px-md-4">
+        <div class="main px-lg-4 px-md-4"> 
 
             <!-- Body: Header -->
             <div class="header">
@@ -462,525 +464,227 @@
 
             </div>
 
-            <!-- Body: Body -->
-            <div class="body d-flex py-3">
+            <!-- Body: Body -->       
+            <div class="body d-flex py-lg-3 py-md-2">
                 <div class="container-xxl">
                     <div class="row align-items-center">
                         <div class="border-0 mb-4">
                             <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-                                <h3 class="h4 mb-0">Admin Profile</h3>
+                                <h3 class="h4 mb-0">Employee Logs</h3>
                             </div>
                         </div>
                     </div> <!-- Row end  -->
                     <div class="row g-3 mb-3">
-                        <div class="col-12">
-                            <div class="card">
+                        <div class="col-lg-2">
+                            <label  class="form-label">Employee</label>
+                            <select class="form-select">
+                                <option selected>Phil Glover</option>
+                                <option value="1">Robert Anderson</option>
+                                <option value="2">Ryan Randall</option>
+                                <option value="3">Ryan Stewart</option>
+                                <option value="4">Sally Graham</option>
+                            </select>
+                        </div>  
+                        <div class="col-lg-2">
+                            <label  class="form-label">Log Period</label>
+                            <select class="form-select">
+                                <option selected>Custom</option>
+                                <option value="1">Day</option>
+                                <option value="2">Week</option>
+                                <option value="3">Month</option>
+                            </select>
+                        </div> 
+                        <div class="col-lg-3">
+                            <label class="form-label">From</label>
+                            <input type="date" class="form-control" value="2021-12-27">
+                        </div> 
+                        <div class="col-lg-3">
+                            <label class="form-label">To</label>
+                            <input type="date" class="form-control" value="2021-12-29">
+                        </div> 
+                        <div class="col-lg-2">
+                            <label class="form-label">Show Logs</label>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                    </div>
+                    <div class="row clearfix g-3">
+                        <div class="col-sm-12">
+                            <div class="card mb-3">
                                 <div class="card-body">
-                                    <div class="row g-3">
-                                        <div class="col-md-12 col-lg-3">
-                                            <img src="assets/images/profile_av.svg" class="img-thumbnail" alt="..." style="width: 260px;">
-                                            <ul class="list-unstyled custom d-flex mb-3 mt-3">
-                                                <li class="me-3"><a href="#" class="card-link"><i class="fa fa-lg fa-facebook"></i></a></li>
-                                                <li class="me-3"><a href="#" class="card-link"><i class="fa fa-lg fa-twitter"></i></a></li>
-                                                <li class="me-3"><a href="#" class="card-link"><i class="fa fa-lg fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-12 col-lg-9">
-                                            <h4>John Quinn</h4>
-                                            <div class="d-flex flex-row flex-wrap align-items-center mb-3 mt-2">
-                                                <div class="me-3 me-md-5">
-                                                    <small class="text-muted">Education</small>
-                                                    <div class="mb-0 fw-bold">MCA</div>
-                                                </div>
-                                                <div class="me-3 me-md-5">
-                                                    <small class="text-muted">Experience</small>
-                                                    <div class="mb-0 fw-bold">8+</div>
-                                                </div>
-                                                <div>
-                                                    <small class="text-muted">City</small>
-                                                    <div class="mb-0 fw-bold">London</div>
-                                                </div>
-                                            </div>
-                                            <span>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                                            <ul class="design-box ps-0">
-                                                <li>
-                                                    <div class="icon text-center">
-                                                        <i class="fa fa-map-marker text-secondary"></i>
-                                                    </div>
-                                                    <div class="fw-bold mb-0">Address</div>
-                                                    <span>Trinity Rd, Gravesend	Kent, DA12 1LU</span>
-                                                </li>
-                                                <li>
-                                                    <div class="icon text-center">
-                                                        <i class="fa fa-mobile text-secondary"></i>
-                                                    </div>
-                                                    <div class="fw-bold mb-0">Mobile</div>
-                                                    <span>+ 902-855-8888</span>
-                                                </li>
-                                                <li>
-                                                    <div class="icon text-center">
-                                                        <i class="fa fa-envelope text-secondary"></i>
-                                                    </div>
-                                                    <div class="fw-bold mb-0">Email Address</div>
-                                                    <span>Johnquinn@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>       
+                                    <table id="myProjectTable" class="table table-hover align-middle mb-0" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Employee</th>
+                                                <th>Project</th>
+                                                <th>Start Date</th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Active Time</th>
+                                                <th>Idle Time</th>
+                                                <th>Total Time</th>
+                                                <th>Activity Level</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                    <span class="fw-bold ms-1">Phil	Glover</span>
+                                                </td>
+                                                <td>
+                                                    <a href="projects.html">Box of Crayons</a>
+                                                </td>
+                                                <td>
+                                                    27 Dec 2021
+                                                </td>
+                                                <td>
+                                                    12:17
+                                                </td>
+                                                <td>
+                                                    20:17  
+                                                </td>
+                                                <td>
+                                                    06:42   
+                                                </td>
+                                                <td>
+                                                    01:17 
+                                                </td>
+                                                <td>
+                                                    07:59 
+                                                </td>
+                                                <td>
+                                                    73
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                    <span class="fw-bold ms-1">Phil	Glover</span>
+                                                </td>
+                                                <td>
+                                                    <a href="projects.html">Box of Crayons</a>
+                                                </td>
+                                                <td>
+                                                    28 Dec 2021
+                                                </td>
+                                                <td>
+                                                    10:24
+                                                </td>
+                                                <td>
+                                                    15:37  
+                                                </td>
+                                                <td>
+                                                    02:32  
+                                                </td>
+                                                <td>
+                                                    02:40
+                                                </td>
+                                                <td>
+                                                    05:13
+                                                </td>
+                                                <td>
+                                                    38
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                    <span class="fw-bold ms-1">Phil	Glover</span>
+                                                </td>
+                                                <td>
+                                                    <a href="projects.html">Box of Crayons</a>
+                                                </td>
+                                                <td>
+                                                    28 Dec 2021
+                                                </td>
+                                                <td>
+                                                    15:38
+                                                </td>
+                                                <td>
+                                                    19:57  
+                                                </td>
+                                                <td>
+                                                    04:17  
+                                                </td>
+                                                <td>
+                                                    00:00
+                                                </td>
+                                                <td>
+                                                    04:18
+                                                </td>
+                                                <td>
+                                                    88
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                    <span class="fw-bold ms-1">Phil	Glover</span>
+                                                </td>
+                                                <td>
+                                                    <a href="projects.html">Box of Crayons</a>
+                                                </td>
+                                                <td>
+                                                    29 Dec 2021
+                                                </td>
+                                                <td>
+                                                    10:13
+                                                </td>
+                                                <td>
+                                                    17:42 
+                                                </td>
+                                                <td>
+                                                    04:43
+                                                </td>
+                                                <td>
+                                                    02:45
+                                                </td>
+                                                <td>
+                                                    07:28
+                                                </td>
+                                                <td>
+                                                    49
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                    <span class="fw-bold ms-1">Phil	Glover</span>
+                                                </td>
+                                                <td>
+                                                    <a href="projects.html">Box of Crayons</a>
+                                                </td>
+                                                <td>
+                                                    29 Dec 2021
+                                                </td>
+                                                <td>
+                                                    17:43
+                                                </td>
+                                                <td>
+                                                    18:39 
+                                                </td>
+                                                <td>
+                                                    00:56
+                                                </td>
+                                                <td>
+                                                    00:00
+                                                </td>
+                                                <td>
+                                                    00:56
+                                                </td>
+                                                <td>
+                                                    90
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <ul class="nav nav-tabs tab-body-header rounded d-inline-flex">
-                                <li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#Company_Settings">Company</a></li>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Notifications">Notifications </a></li>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Change_Password">Change Password </a></li>
-                            </ul>
-                            <div class="tab-content mt-3">
-                                <div class="tab-pane active show" id="Company_Settings">
-                                    <div class="card mb-3">
-                                        <div class="card-header p-3">
-                                            <h5 class="card-title">Settings</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <form class="row g-3">
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Name <span class="text-danger">*</span></label>
-                                                        <input class="form-control" type="text" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Contact Person</label>
-                                                        <input class="form-control" value="John Quinn" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
-                                                        <input class="form-control" value="+902-855-8888" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Address</label>
-                                                        <textarea class="form-control" placeholder="44 Shirley Ave. West Chicago, IL 60185" aria-label="With textarea"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label class="form-label">Email <span class="text-danger">*</span></label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-text">@</span>
-                                                        <input type="text" class="form-control" value="Johnquinn@gmail.com">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label class="form-label">Website Url</label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-text">http://</span>
-                                                        <input type="text" class="form-control" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Country</label>
-                                                        <select class="form-control">
-                                                            <option value="">-- Select Country --</option>
-                                                            <option value="AF">Afghanistan</option>
-                                                            <option value="AX">Åland Islands</option>
-                                                            <option value="AL">Albania</option>
-                                                            <option value="DZ">Algeria</option>
-                                                            <option value="AS">American Samoa</option>
-                                                            <option value="AD">Andorra</option>
-                                                            <option value="AO">Angola</option>
-                                                            <option value="AI">Anguilla</option>
-                                                            <option value="AQ">Antarctica</option>
-                                                            <option value="AG">Antigua and Barbuda</option>
-                                                            <option value="AR">Argentina</option>
-                                                            <option value="AM">Armenia</option>
-                                                            <option value="AW">Aruba</option>
-                                                            <option value="AU">Australia</option>
-                                                            <option value="AT">Austria</option>
-                                                            <option value="AZ">Azerbaijan</option>
-                                                            <option value="BS">Bahamas</option>
-                                                            <option value="BH">Bahrain</option>
-                                                            <option value="BD">Bangladesh</option>
-                                                            <option value="BB">Barbados</option>
-                                                            <option value="BY">Belarus</option>
-                                                            <option value="BE">Belgium</option>
-                                                            <option value="BZ">Belize</option>
-                                                            <option value="BJ">Benin</option>
-                                                            <option value="BM">Bermuda</option>
-                                                            <option value="BT">Bhutan</option>
-                                                            <option value="BO">Bolivia, Plurinational State of</option>
-                                                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-                                                            <option value="BA">Bosnia and Herzegovina</option>
-                                                            <option value="BW">Botswana</option>
-                                                            <option value="BV">Bouvet Island</option>
-                                                            <option value="BR">Brazil</option>
-                                                            <option value="IO">British Indian Ocean Territory</option>
-                                                            <option value="BN">Brunei Darussalam</option>
-                                                            <option value="BG">Bulgaria</option>
-                                                            <option value="BF">Burkina Faso</option>
-                                                            <option value="BI">Burundi</option>
-                                                            <option value="KH">Cambodia</option>
-                                                            <option value="CM">Cameroon</option>
-                                                            <option value="CA">Canada</option>
-                                                            <option value="CV">Cape Verde</option>
-                                                            <option value="KY">Cayman Islands</option>
-                                                            <option value="CF">Central African Republic</option>
-                                                            <option value="TD">Chad</option>
-                                                            <option value="CL">Chile</option>
-                                                            <option value="CN">China</option>
-                                                            <option value="CX">Christmas Island</option>
-                                                            <option value="CC">Cocos (Keeling) Islands</option>
-                                                            <option value="CO">Colombia</option>
-                                                            <option value="KM">Comoros</option>
-                                                            <option value="CG">Congo</option>
-                                                            <option value="CD">Congo, the Democratic Republic of the</option>
-                                                            <option value="CK">Cook Islands</option>
-                                                            <option value="CR">Costa Rica</option>
-                                                            <option value="CI">Côte d'Ivoire</option>
-                                                            <option value="HR">Croatia</option>
-                                                            <option value="CU">Cuba</option>
-                                                            <option value="CW">Curaçao</option>
-                                                            <option value="CY">Cyprus</option>
-                                                            <option value="CZ">Czech Republic</option>
-                                                            <option value="DK">Denmark</option>
-                                                            <option value="DJ">Djibouti</option>
-                                                            <option value="DM">Dominica</option>
-                                                            <option value="DO">Dominican Republic</option>
-                                                            <option value="EC">Ecuador</option>
-                                                            <option value="EG">Egypt</option>
-                                                            <option value="SV">El Salvador</option>
-                                                            <option value="GQ">Equatorial Guinea</option>
-                                                            <option value="ER">Eritrea</option>
-                                                            <option value="EE">Estonia</option>
-                                                            <option value="ET">Ethiopia</option>
-                                                            <option value="FK">Falkland Islands (Malvinas)</option>
-                                                            <option value="FO">Faroe Islands</option>
-                                                            <option value="FJ">Fiji</option>
-                                                            <option value="FI">Finland</option>
-                                                            <option value="FR">France</option>
-                                                            <option value="GF">French Guiana</option>
-                                                            <option value="PF">French Polynesia</option>
-                                                            <option value="TF">French Southern Territories</option>
-                                                            <option value="GA">Gabon</option>
-                                                            <option value="GM">Gambia</option>
-                                                            <option value="GE">Georgia</option>
-                                                            <option value="DE">Germany</option>
-                                                            <option value="GH">Ghana</option>
-                                                            <option value="GI">Gibraltar</option>
-                                                            <option value="GR">Greece</option>
-                                                            <option value="GL">Greenland</option>
-                                                            <option value="GD">Grenada</option>
-                                                            <option value="GP">Guadeloupe</option>
-                                                            <option value="GU">Guam</option>
-                                                            <option value="GT">Guatemala</option>
-                                                            <option value="GG">Guernsey</option>
-                                                            <option value="GN">Guinea</option>
-                                                            <option value="GW">Guinea-Bissau</option>
-                                                            <option value="GY">Guyana</option>
-                                                            <option value="HT">Haiti</option>
-                                                            <option value="HM">Heard Island and McDonald Islands</option>
-                                                            <option value="VA">Holy See (Vatican City State)</option>
-                                                            <option value="HN">Honduras</option>
-                                                            <option value="HK">Hong Kong</option>
-                                                            <option value="HU">Hungary</option>
-                                                            <option value="IS">Iceland</option>
-                                                            <option value="IN">India</option>
-                                                            <option value="ID">Indonesia</option>
-                                                            <option value="IR">Iran, Islamic Republic of</option>
-                                                            <option value="IQ">Iraq</option>
-                                                            <option value="IE">Ireland</option>
-                                                            <option value="IM">Isle of Man</option>
-                                                            <option value="IL">Israel</option>
-                                                            <option value="IT">Italy</option>
-                                                            <option value="JM">Jamaica</option>
-                                                            <option value="JP">Japan</option>
-                                                            <option value="JE">Jersey</option>
-                                                            <option value="JO">Jordan</option>
-                                                            <option value="KZ">Kazakhstan</option>
-                                                            <option value="KE">Kenya</option>
-                                                            <option value="KI">Kiribati</option>
-                                                            <option value="KP">Korea, Democratic People's Republic of</option>
-                                                            <option value="KR">Korea, Republic of</option>
-                                                            <option value="KW">Kuwait</option>
-                                                            <option value="KG">Kyrgyzstan</option>
-                                                            <option value="LA">Lao People's Democratic Republic</option>
-                                                            <option value="LV">Latvia</option>
-                                                            <option value="LB">Lebanon</option>
-                                                            <option value="LS">Lesotho</option>
-                                                            <option value="LR">Liberia</option>
-                                                            <option value="LY">Libya</option>
-                                                            <option value="LI">Liechtenstein</option>
-                                                            <option value="LT">Lithuania</option>
-                                                            <option value="LU">Luxembourg</option>
-                                                            <option value="MO">Macao</option>
-                                                            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-                                                            <option value="MG">Madagascar</option>
-                                                            <option value="MW">Malawi</option>
-                                                            <option value="MY">Malaysia</option>
-                                                            <option value="MV">Maldives</option>
-                                                            <option value="ML">Mali</option>
-                                                            <option value="MT">Malta</option>
-                                                            <option value="MH">Marshall Islands</option>
-                                                            <option value="MQ">Martinique</option>
-                                                            <option value="MR">Mauritania</option>
-                                                            <option value="MU">Mauritius</option>
-                                                            <option value="YT">Mayotte</option>
-                                                            <option value="MX">Mexico</option>
-                                                            <option value="FM">Micronesia, Federated States of</option>
-                                                            <option value="MD">Moldova, Republic of</option>
-                                                            <option value="MC">Monaco</option>
-                                                            <option value="MN">Mongolia</option>
-                                                            <option value="ME">Montenegro</option>
-                                                            <option value="MS">Montserrat</option>
-                                                            <option value="MA">Morocco</option>
-                                                            <option value="MZ">Mozambique</option>
-                                                            <option value="MM">Myanmar</option>
-                                                            <option value="NA">Namibia</option>
-                                                            <option value="NR">Nauru</option>
-                                                            <option value="NP">Nepal</option>
-                                                            <option value="NL">Netherlands</option>
-                                                            <option value="NC">New Caledonia</option>
-                                                            <option value="NZ">New Zealand</option>
-                                                            <option value="NI">Nicaragua</option>
-                                                            <option value="NE">Niger</option>
-                                                            <option value="NG">Nigeria</option>
-                                                            <option value="NU">Niue</option>
-                                                            <option value="NF">Norfolk Island</option>
-                                                            <option value="MP">Northern Mariana Islands</option>
-                                                            <option value="NO">Norway</option>
-                                                            <option value="OM">Oman</option>
-                                                            <option value="PK">Pakistan</option>
-                                                            <option value="PW">Palau</option>
-                                                            <option value="PS">Palestinian Territory, Occupied</option>
-                                                            <option value="PA">Panama</option>
-                                                            <option value="PG">Papua New Guinea</option>
-                                                            <option value="PY">Paraguay</option>
-                                                            <option value="PE">Peru</option>
-                                                            <option value="PH">Philippines</option>
-                                                            <option value="PN">Pitcairn</option>
-                                                            <option value="PL">Poland</option>
-                                                            <option value="PT">Portugal</option>
-                                                            <option value="PR">Puerto Rico</option>
-                                                            <option value="QA">Qatar</option>
-                                                            <option value="RE">Réunion</option>
-                                                            <option value="RO">Romania</option>
-                                                            <option value="RU">Russian Federation</option>
-                                                            <option value="RW">Rwanda</option>
-                                                            <option value="BL">Saint Barthélemy</option>
-                                                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                            <option value="KN">Saint Kitts and Nevis</option>
-                                                            <option value="LC">Saint Lucia</option>
-                                                            <option value="MF">Saint Martin (French part)</option>
-                                                            <option value="PM">Saint Pierre and Miquelon</option>
-                                                            <option value="VC">Saint Vincent and the Grenadines</option>
-                                                            <option value="WS">Samoa</option>
-                                                            <option value="SM">San Marino</option>
-                                                            <option value="ST">Sao Tome and Principe</option>
-                                                            <option value="SA">Saudi Arabia</option>
-                                                            <option value="SN">Senegal</option>
-                                                            <option value="RS">Serbia</option>
-                                                            <option value="SC">Seychelles</option>
-                                                            <option value="SL">Sierra Leone</option>
-                                                            <option value="SG">Singapore</option>
-                                                            <option value="SX">Sint Maarten (Dutch part)</option>
-                                                            <option value="SK">Slovakia</option>
-                                                            <option value="SI">Slovenia</option>
-                                                            <option value="SB">Solomon Islands</option>
-                                                            <option value="SO">Somalia</option>
-                                                            <option value="ZA">South Africa</option>
-                                                            <option value="GS">South Georgia and the South Sandwich Islands</option>
-                                                            <option value="SS">South Sudan</option>
-                                                            <option value="ES">Spain</option>
-                                                            <option value="LK">Sri Lanka</option>
-                                                            <option value="SD">Sudan</option>
-                                                            <option value="SR">Suriname</option>
-                                                            <option value="SJ">Svalbard and Jan Mayen</option>
-                                                            <option value="SZ">Swaziland</option>
-                                                            <option value="SE">Sweden</option>
-                                                            <option value="CH">Switzerland</option>
-                                                            <option value="SY">Syrian Arab Republic</option>
-                                                            <option value="TW">Taiwan, Province of China</option>
-                                                            <option value="TJ">Tajikistan</option>
-                                                            <option value="TZ">Tanzania, United Republic of</option>
-                                                            <option value="TH">Thailand</option>
-                                                            <option value="TL">Timor-Leste</option>
-                                                            <option value="TG">Togo</option>
-                                                            <option value="TK">Tokelau</option>
-                                                            <option value="TO">Tonga</option>
-                                                            <option value="TT">Trinidad and Tobago</option>
-                                                            <option value="TN">Tunisia</option>
-                                                            <option value="TR">Turkey</option>
-                                                            <option value="TM">Turkmenistan</option>
-                                                            <option value="TC">Turks and Caicos Islands</option>
-                                                            <option value="TV">Tuvalu</option>
-                                                            <option value="UG">Uganda</option>
-                                                            <option value="UA">Ukraine</option>
-                                                            <option value="AE">United Arab Emirates</option>
-                                                            <option value="GB">United Kingdom</option>
-                                                            <option value="US">United States</option>
-                                                            <option value="UM">United States Minor Outlying Islands</option>
-                                                            <option value="UY">Uruguay</option>
-                                                            <option value="UZ">Uzbekistan</option>
-                                                            <option value="VU">Vanuatu</option>
-                                                            <option value="VE">Venezuela, Bolivarian Republic of</option>
-                                                            <option value="VN">Viet Nam</option>
-                                                            <option value="VG">Virgin Islands, British</option>
-                                                            <option value="VI">Virgin Islands, U.S.</option>
-                                                            <option value="WF">Wallis and Futuna</option>
-                                                            <option value="EH">Western Sahara</option>
-                                                            <option value="YE">Yemen</option>
-                                                            <option value="ZM">Zambia</option>
-                                                            <option value="ZW">Zimbabwe</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                                    <div class="form-group">
-                                                        <label class="form-label">State/Province</label>
-                                                        <select class="form-control">
-                                                            <option>California</option>
-                                                            <option>Alaska</option>
-                                                            <option>Alabama</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                                    <div class="form-group">
-                                                        <label class="form-label">City</label>
-                                                        <input class="form-control" value="London" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Postal Code</label>
-                                                        <input class="form-control" value="99444" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Phone Number</label>
-                                                        <input class="form-control" value="902-855-8888" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Fax</label>
-                                                        <input class="form-control" value="902-855-8888" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 mt-4">
-                                                    <button type="button" class="btn btn-primary">SAVE</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="Notifications">
-                                    <div class="card">
-                                        <div class="card-header p-3">
-                                            <h5 class="card-title">Notifications Settings</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
-                                                <li class="list-group-item px-0 py-3">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" value="" id="ns-1">
-                                                        <label class="form-check-label" for="ns-1">
-                                                            Anyone send me a message
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item px-0 py-3">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" value="" id="ns-2">
-                                                        <label class="form-check-label" for="ns-2">
-                                                            Anyone seeing my profile page
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item px-0 py-3">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" value="" id="ns-3">
-                                                        <label class="form-check-label" for="ns-3">
-                                                            Anyone posts a comment on my post
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item px-0 py-3">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" value="" id="ns-4">
-                                                        <label class="form-check-label" for="ns-4">
-                                                            Anyone send me a message
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item px-0 py-3">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" value="" id="ns-5">
-                                                        <label class="form-check-label" for="ns-5">
-                                                            Anyone seeing my profile page
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="Change_Password">
-                                    <div class="card">
-                                        <div class="card-header p-3">
-                                            <h5 class="card-title">Change Password</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row g-3">
-                                                <div class="col-lg-4 col-md-12">
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" value="Johnquinn" disabled="" placeholder="Username">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-12">
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-control" value="Johnquinn@gmail.com" placeholder="Email">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-12">
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Phone Number">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <h6 class="border-top pt-2 mt-3 mb-3">Change Password</h6>
-                                                    <div class="mb-2">
-                                                        <input type="password" class="form-control" placeholder="Current Password">
-                                                    </div>
-                                                    <div class="mb-2">
-                                                        <input type="password" class="form-control" placeholder="New Password">
-                                                    </div>
-                                                    <div class="mb-2">
-                                                        <input type="password" class="form-control" placeholder="Confirm New Password">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 mt-4">
-                                                    <button type="button" class="btn btn-primary">SAVE</button> &nbsp;
-                                                    <button type="button" class="btn btn-default">CANCEL</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!-- Row End -->
                 </div>
             </div>
-        
+
             <!-- Modal Custom Settings-->
             <div class="modal fade right" id="Settingmodal" tabindex="-1"  aria-hidden="true">
                 <div class="modal-dialog  modal-sm">
@@ -1112,16 +816,339 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-            
-        </div>  
-        
-    </div>
+            </div>
 
+            <!-- Create Employee-->
+            <div class="modal fade" id="addemp" tabindex="-1"  aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title  fw-bold" id="createprojectlLabel"> Add Employee</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput877" class="form-label">Employee Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput877" placeholder="Explain what the Project Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput977" class="form-label">Employee Company</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput977" placeholder="Explain what the Project Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formFileMultipleoneone" class="form-label">Employee Profile</label>
+                                <input class="form-control" type="file" id="formFileMultipleoneone" >
+                            </div>
+                            <div class="deadline-form">
+                                <form>
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-sm-6">
+                                            <label for="exampleFormControlInput1778" class="form-label">Employee ID</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1778" placeholder="User Name">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleFormControlInput2778" class="form-label">Joining Date</label>
+                                            <input type="date" class="form-control" id="exampleFormControlInput2778">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <label for="exampleFormControlInput177" class="form-label">User Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput177" placeholder="User Name">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleFormControlInput277" class="form-label">Password</label>
+                                        <input type="Password" class="form-control" id="exampleFormControlInput277" placeholder="Password">
+                                    </div>
+                                    </div> 
+                                    <div class="row g-3 mb-3">
+                                        <div class="col">
+                                            <label for="exampleFormControlInput477" class="form-label">Email ID</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput477" placeholder="User Name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="exampleFormControlInput777" class="form-label">Phone</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput777" placeholder="User Name">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3">
+                                        <div class="col">
+                                            <label  class="form-label">Department</label>
+                                            <select class="form-select" aria-label="Default select Project Category">
+                                                <option selected>Web Development</option>
+                                                <option value="1">It Management</option>
+                                                <option value="2">Marketing</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label  class="form-label">Designation</label>
+                                            <select class="form-select" aria-label="Default select Project Category">
+                                                <option selected>UI/UX Design</option>
+                                                <option value="1">Website Design</option>
+                                                <option value="2">App Development</option>
+                                                <option value="3">Quality Assurance</option>
+                                                <option value="4">Development</option>
+                                                <option value="5">Backend Development</option>
+                                                <option value="6">Software Testing</option>
+                                                <option value="7">Website Design</option>
+                                                <option value="8">Marketing</option>
+                                                <option value="9">SEO</option>
+                                                <option value="10">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="mb-3">          
+                                <label for="exampleFormControlTextarea78" class="form-label">Description (optional)</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea78" rows="3" placeholder="Add any extra details about the request"></textarea>
+                            </div> 
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Project Permission</th>
+                                            <th class="text-center">Read</th>
+                                            <th class="text-center">Write</th>
+                                            <th class="text-center">Create</th>
+                                            <th class="text-center">Delete</th>
+                                            <th class="text-center">Import</th>
+                                            <th class="text-center">Export</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">Projects</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" checked>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="fw-bold">Tasks</td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" checked>
+                            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="fw-bold">Chat</td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18" checked>
+                            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="fw-bold">Estimates</td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault19" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault21" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault22" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault23" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault24" checked>
+                            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="fw-bold">Invoices</td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault25" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault26">
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault27" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault28">
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault29" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault30" checked>
+                            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="fw-bold">Timing Sheets</td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault31" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault32" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault34" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault35" checked>
+                            
+                                            </td>
+                                            <td class="text-center">
+                            
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault36" checked>
+                            
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
+                            <button type="button" class="btn btn-primary">Create</button>
+                        </div> 
+                    </div>  
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+    
     <!-- Jquery Core Js -->
     <script src="assets/bundles/libscripts.bundle.js"></script>
 
+    <!-- Plugin Js-->
+    <script src="assets/bundles/dataTables.bundle.js"></script>
+
     <!-- Jquery Page Js -->
     <script src="../js/template.js"></script>
+    <script>
+        // project data table
+        $(document).ready(function() {
+            $('#myProjectTable')
+            .addClass( 'nowrap' )
+            .dataTable( {
+                responsive: true,
+                columnDefs: [
+                    { targets: [-1, -3], className: 'dt-body-right' }
+                ]
+            });
+            $('.deleterow').on('click',function(){
+            var tablename = $(this).closest('table').DataTable();  
+            tablename
+                    .row( $(this)
+                    .parents('tr') )
+                    .remove()
+                    .draw();
+
+            } );
+        });
+    </script>
 </body>
-</html> 
+</html>
