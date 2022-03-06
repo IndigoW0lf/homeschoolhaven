@@ -76,7 +76,7 @@ function chartFunctiontwo() {
             series: [
                 {
                     name: 'Working',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 3, {
+                    data: generateDayWiseTimeSeries(new Date('06 Mar 2022 GMT').getTime(), 3, {
                         min: 1,
                         max: 10
                     })
@@ -164,7 +164,7 @@ function chartFunctionthree() {
             series: [
                 {
                     name: 'Hours',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 8, {
+                    data: generateDayWiseTimeSeries(new Date('06 Mar 2022 GMT').getTime(), 8, {
                         min: 1,
                         max: 10
                     })
@@ -252,7 +252,7 @@ function chartFunctionfour() {
             series: [
                 {
                     name: 'Hours',
-                    data: generateDayWiseTimeSeries(new Date('02 Jan 2017 GMT').getTime(), 31, {
+                    data: generateDayWiseTimeSeries(new Date('06 Mar 2022 GMT').getTime(), 31, {
                         min: 1,
                         max: 10
                     })
@@ -324,53 +324,7 @@ $(function() {
     //**************//
         var options = {
             chart: {
-                height: 180,
-                type: 'radialBar',
-            },
-            colors: ['var(--chart-color1)'],
-            plotOptions: {
-                radialBar: {
-                    hollow: {
-                        size: '70%',
-                    }
-                },
-            },
-            series: [50],
-            labels: ['Design'],
-        }
-        var chart = new ApexCharts(
-            document.querySelector("#apex-circle-chart-one"),
-            options
-        );
-        chart.render();
-
-     //**************//
-        var options = {
-            chart: {
-                height: 180,
-                type: 'radialBar',
-            },
-            colors: ['var(--chart-color5)'],
-            plotOptions: {
-                radialBar: {
-                    hollow: {
-                        size: '70%',
-                    }
-                },
-            },
-            series: [80],
-            labels: ['Devlopment'],
-        }
-        var chart = new ApexCharts(
-            document.querySelector("#apex-circle-chart-two"),
-            options
-        );
-        chart.render();
-
-    //**************//
-        var options = {
-            chart: {
-                height: 180,
+                height: 220,
                 type: 'radialBar',
             },
             colors: ['var(--chart-color3)'],
@@ -381,8 +335,54 @@ $(function() {
                     }
                 },
             },
-            series: [40],
-            labels: ['Marketing'],
+            series: [95],
+            labels: ['Science'],
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#apex-circle-chart-one"),
+            options
+        );
+        chart.render();
+
+     //**************//
+        var options = {
+            chart: {
+                height: 220,
+                type: 'radialBar',
+            },
+            colors: ['var(--chart-color1)'],
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            series: [92],
+            labels: ['Language Arts'],
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#apex-circle-chart-two"),
+            options
+        );
+        chart.render();
+
+    //**************//
+        var options = {
+            chart: {
+                height: 220,
+                type: 'radialBar',
+            },
+            colors: ['var(--chart-color3)'],
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '70%',
+                    }
+                },
+            },
+            series: [90],
+            labels: ['Math'],
         }
         var chart = new ApexCharts(
             document.querySelector("#apex-circle-chart-three"),
