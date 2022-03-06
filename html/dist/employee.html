@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Homeschool Timetracker | Student Logs</title>
+    <title>::Timetracker::Tickets</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
     <!-- plugin css file  -->
     <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
@@ -23,49 +23,89 @@
                     <span class="logo-icon">
                         <i class="icofont-stopwatch fs-2"></i>
                     </span>
-                    <span class="logo-text">Homeschool Timetracker</span>
+                    <span class="logo-text">Time-Tracker</span>
                 </a>
 
                 <!-- Menu: main ul -->
                 <ul class="menu-list flex-grow-1 mt-3">
                     <li><a class="m-link" href="index.html"><i class="icofont-home fs-5"></i> <span>Dashboard</span></a></li>
                     <li class="collapsed">
-                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#menu-report" href="#">
-                            <i class="icofont-chart-pie fs-5"></i><span>Reports</span><span class="arrow icofont-rounded-down ms-auto text-Languag fs-5"></span>
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-report" href="#">
+                            <i class="icofont-chart-pie fs-5"></i><span>Reports</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
-                        <ul class="sub-menu collapse show" id="menu-report">
+                        <ul class="sub-menu collapse" id="menu-report">
                             <li><a class="ms-link" href="attendance.html">Attendance</a></li>
                             <li><a class="ms-link" href="hourstrack.html">Hours Tracked</a></li>
-                            <!-- <li><a class="ms-link" href="timeline.html">Timeline</a></li> -->
-                            <li><a class="ms-link active" href="student-logs.html">Student Logs</a></li>
+                            <li><a class="ms-link" href="timeline.html">Timeline</a></li>
+                            <li><a class="ms-link" href="employee-logs.html">Employee Logs</a></li>
                         </ul>
                     </li>
+                    <li><a class="m-link" href="screencasts.html"><i class="icofont-computer fs-5"></i> <span>Screencasts</span></a></li>
                     <li class="collapsed">
-                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-order" href="#">
-                            <i class="icofont-tasks fs-5"></i> <span>Students</span> <span class="arrow icofont-rounded-down ms-auto text-Languag fs-5"></span>
+                        <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#menu-order" href="#">
+                            <i class="icofont-tasks fs-5"></i> <span>Projects</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
-                        <ul class="sub-menu collapse" id="menu-order">
-                            <!-- <li><a class="ms-link" href="subjects.html">Subject List</a></li> -->
-                            <li><a class="ms-link" href="student.html">Students</a></li>
+                        <ul class="sub-menu collapse show" id="menu-order">
+                            <li><a class="ms-link" href="projects.html">Project List</a></li>
+                            <li><a class="ms-link active" href="employee.html">Employee</a></li>
                             <li><a class="ms-link" href="task.html">Task Progress</a></li>
-                            
-                            
+                            <li><a class="ms-link" href="tickets.html">Ticket List</a></li>
+                            <li><a class="ms-link" href="ticket-detail.html">Ticket Details</a></li>
+                            <li><a class="ms-link" href="timesheet.html">Timesheet</a></li>
                         </ul>
                     </li>
                     <li class="collapsed">
                         <a class="m-link" data-bs-toggle="collapse" data-bs-target="#app" href="#">
-                            <i class="icofont-code-alt fs-5"></i> <span>App</span> <span class="arrow icofont-rounded-down ms-auto text-Languag fs-5"></span>
+                            <i class="icofont-code-alt fs-5"></i> <span>App</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
                         </a>
                         <!-- Menu: Sub menu ul -->
                         <ul class="sub-menu collapse" id="app">
-                            <li><a class="ms-link" href="calendar.html">Calendar</a></li>
-                            <!-- <li><a class="ms-link" href="chat.html"> Communication</a></li> -->
+                            <li><a class="ms-link" href="calendar.html">Calandar</a></li>
+                            <li><a class="ms-link" href="chat.html"> Communication</a></li>
                         </ul>
                     </li>
+                    <li><a class="m-link" href="ui-elements/ui-alerts.html"><i class="icofont-paint fs-5"></i> <span>UI Components</span></a></li>
+                    <li class="divider mt-2 py-2 text-uppercase"><small>Ready UI</small></li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#form" href="#">
+                            <i class="icofont-file-text fs-5"></i> <span>Form Input</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
+                        </a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="form">
+                            <li><a class="ms-link" href="form-bootstrap.html">Bootstrap Form</a></li>
+                            <li><a class="ms-link" href="form-custome.html">Custome Form</a></li>
+                            <li><a class="ms-link" href="form-wizard.html">Wizard Form</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#font" href="#">
+                            <i class="icofont-brand-icofont fs-5"></i><span>Icon Example</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
+                        </a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="font">
+                            <li><a class="ms-link" href="icon-iconfont.html">Icofont Icon</a></li>
+                            <li><a class="ms-link" href="icon-bootstrap.html"> Bootstrap Icon</a></li>
+                            <li><a class="ms-link" href="icon-fontawesome.html"> Font-Awesome Icon</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsed">
+                        <a class="m-link" data-bs-toggle="collapse" data-bs-target="#widget" href="#">
+                            <i class="icofont-code fs-5"></i><span>Widget</span><span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span>
+                        </a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="widget">
+                            <li><a class="ms-link" href="widget-example.html">Widget Example</a></li>
+                            <li><a class="ms-link" href="apexchart.html">Apex Chart</a></li>
+                            <li><a class="ms-link" href="priceplan.html"> Price Plan</a></li>
+                            <li><a class="ms-link" href="profile.html"> Profile Page</a></li>
+                            <li><a class="ms-link" href="table.html"> Tables</a></li>
+                        </ul>
+                    </li>   
+                </ul>
                 
-                <!-- Menu: menu collapse btn -->
+                <!-- Menu: menu collepce btn -->
                 <button type="button" class="btn btn-link sidebar-mini-btn text-light">
                     <span class="ms-2"><i class="icofont-bubble-right"></i></span>
                 </button>
@@ -89,9 +129,9 @@
                                         <path  d="M36,34v-2h-2.98c-0.598-0.363-1.081-3.663-1.4-5.847c-0.588-4.075-1.415-9.798-4.146-13.723  C26.584,12.154,25.599,12,24.5,12c-3.646,0-5.576,1.657-7.106,4.086C15.089,19.746,14,30.126,14,33c0,2.757,2.243,5,5,5  c2.414,0,4.435-1.721,4.898-4H36z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
                                         <path class="st0" d="M33.02,32c-0.598-0.363-1.081-3.663-1.4-5.847c-0.851-5.899-2.199-15.254-9.101-17.604  C23.433,7.643,24,6.386,24,5c0-2.757-2.243-5-5-5s-5,2.243-5,5c0,1.386,0.567,2.643,1.482,3.549  c-6.902,2.35-8.25,11.705-9.101,17.604C6.209,27.324,5.991,28.813,5.733,30h2.042c0.192-0.961,0.376-2.127,0.586-3.562  C9.36,19.501,10.73,10,19,10c8.27,0,9.64,9.501,10.641,16.442c0.386,2.636,0.682,4.394,1.108,5.558H2v2h12.101  c0.464,2.279,2.485,4,4.899,4c2.415,0,4.435-1.721,4.899-4H36v-2H33.02z M19,8c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3  S20.654,8,19,8z M19,36c-1.304,0-2.416-0.836-2.829-2h5.658C21.416,35.164,20.304,36,19,36z" ></path>
                                     </svg>
-                                    <!-- <span class="pulse-ring"></span> -->
+                                    <span class="pulse-ring"></span>
                                 </a>
-                                <div id="NotificationsDiv" class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-md-Language p-0 m-0">
+                                <div id="NotificationsDiv" class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-md-end p-0 m-0">
                                     <div class="card border-0 w380">
                                         <div class="card-header border-0 p-3">
                                             <h5 class="mb-0 font-weight-light d-flex justify-content-between">
@@ -106,8 +146,17 @@
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
                                                             <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Leila Keakealani</span> <small>25MIN</small></p>
-                                                                <span class="">Completed 45 minutes of: Math </span>
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Chloe Walkerr</span> <small>2MIN</small></p>
+                                                                <span class="">Added New Task 2021-07-15 <span class="badge bg-success">Add</span></span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="py-2 mb-1 border-bottom">
+                                                        <a href="javascript:void(0);" class="d-flex">
+                                                            <div class="avatar rounded-circle no-thumbnail">AH</div>
+                                                            <div class="flex-fill ms-2">
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Alan	Hill</span> <small>13MIN</small></p>
+                                                                <span class="">Invoice generator </span>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -115,8 +164,8 @@
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <img class="avatar rounded-circle" src="assets/images/xs/avatar3.svg" alt="">
                                                             <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Atlas Kaiana</span> <small>13MIN</small></p>
-                                                                <span class="">Completed 40 minutes of: LA </span>
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Melanie	Oliver</span> <small>1HR</small></p>
+                                                                <span class="">Low Activity</span>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -124,8 +173,8 @@
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <img class="avatar rounded-circle" src="assets/images/xs/avatar5.svg" alt="">
                                                             <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Stella Ahuena</span> <small>25MIN</small></p>
-                                                                <span class="">Completed 45 minutes of: Science</span>
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Boris Hart</span> <small>13MIN</small></p>
+                                                                <span class="">New Task Toyseller</span>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -133,26 +182,17 @@
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <img class="avatar rounded-circle" src="assets/images/xs/avatar6.svg" alt="">
                                                             <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Emalyn Ann</span> <small>1HR</small></p>
-                                                                <span class="">Completed 30 minutes of: Social Studies</span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="py-2 mb-1 border-bottom">
-                                                        <a href="javascript:void(0);" class="d-flex">
-                                                            <img class="avatar rounded-circle" src="assets/images/xs/avatar2.svg" alt="">
-                                                            <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Niles Xavier</span> <small>1HR</small></p>
-                                                                <span class="">Completed 2 hours of: LA</span>
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Alan	Lambert</span> <small>1HR</small></p>
+                                                                <span class="">Leave Apply</span>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li class="py-2">
                                                         <a href="javascript:void(0);" class="d-flex">
-                                                            <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/images/xs/avatar7.svg" alt="">
                                                             <div class="flex-fill ms-2">
-                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Leila Keakealani</span> <small class="">1DAY</small></p>
-                                                                <span class="">Completed 60 minutes of: PE</span>
+                                                                <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Zoe Wright</span> <small class="">1DAY</small></p>
+                                                                <span class="">Profile Updated</span>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -165,9 +205,9 @@
                             </div>
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle pulse" href="#" role="button" data-bs-toggle="dropdown">
-                                    <img src="" alt="">
+                                    <img src="../dist/assets/images/flag/GB.png" alt="">
                                 </a>
-                                <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-md-Language p-0 m-0">
+                                <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-md-end p-0 m-0">
                                     <div class="card border-0">
                                         <ul class="list-unstyled py-2 px-3">
                                             <li>
@@ -193,14 +233,14 @@
                                 <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
                                     <img class="avatar lg rounded-circle img-thumbnail" src="assets/images/profile_av.svg" alt="profile">
                                 </a>
-                                <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-Language p-0 m-0">
+                                <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
                                     <div class="card border-0 w280">
                                         <div class="card-body pb-0">
                                             <div class="d-flex py-1">
                                                 <img class="avatar rounded-circle" src="assets/images/profile_av.svg" alt="profile">
                                                 <div class="flex-fill ms-3">
-                                                    <p class="mb-0"><span class="font-weight-bold">Kai Indigo Wolf</span></p>
-                                                    <small class="">kai.indigo.wolf@gmail.com</small>
+                                                    <p class="mb-0"><span class="font-weight-bold">John	Quinn</span></p>
+                                                    <small class="">Johnquinn@gmail.com</small>
                                                 </div>
                                             </div>
                                             
@@ -225,7 +265,7 @@
                                                     <path xmlns="http://www.w3.org/2000/svg" d="M4,12c0-4.418,3.582-8,8-8s8,3.582,8,8s-3.582,8-8,8S4,16.418,4,12z" style="fill:var(--primary-color);" data-st="fill:var(--chart-color4);"></path>
                                                     <path xmlns="http://www.w3.org/2000/svg" style="opacity:0.7;" d="M12,17.25c-1.689,0-3.265-0.909-4.113-2.372l1.298-0.752C9.766,15.128,10.844,15.75,12,15.75  c1.162,0,2.244-0.628,2.823-1.639l1.301,0.746C15.279,16.333,13.699,17.25,12,17.25z M8.5,12c0.552,0,1-0.672,1-1.5S9.052,9,8.5,9  s-1,0.672-1,1.5S7.948,12,8.5,12z M15.5,12c0.552,0,1-0.672,1-1.5S16.052,9,15.5,9c-0.552,0-1,0.672-1,1.5S14.948,12,15.5,12z"></path>
                                                     <path xmlns="http://www.w3.org/2000/svg" class="st0" id="shock_x5F_color"  d="M4,6H2V2h4v2H4V6z M22,2h-4v2h2v2h2V2z M6,20H4v-2H2v4h4V20z M5,11H2v2h3V11z   M22,11h-3v2h3V11z M13,19h-2v3h2V19z M13,2h-2v3h2V2z M22,18h-2v2h-2v2h4V18z"></path>
-                                                </svg>Tracker Settings
+                                                </svg>Tracker Setting
                                             </a>
                                             <a href="ui-elements/auth-signin.html" class="list-group-item list-group-item-action border-0 ">
                                                 <svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" class="me-3">
@@ -260,16 +300,16 @@
                                     <path style="fill:var(--secondary-color)" d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1zm9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-3zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-3zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0l2-2z"/>
                                 </svg>
                             </a>
-                            <div class="main-search border-Reading px-3 flex-fill">
+                            <div class="main-search border-start px-3 flex-fill">
                                 <input class="form-control" type="text" placeholder="Enter your search key word">
                                 <div class="card border-0 shadow rounded-3 search-result slidedown">
-                                     <div class="card-body text-Reading">
+                                     <div class="card-body text-start">
                 
                                         <small class="dropdown-header">Recent searches</small>
                                         <div class="dropdown-item bg-transparent text-wrap my-2">
-                                            <a class="badge bg-primary" href="#">Algebra II <i class="fa fa-search ms-1"></i></a>
-                                            <a class="badge bg-primary" href="#">Add Student <i class="fa fa-search ms-1"></i></a>
-                                            <a class="badge bg-primary" href="#">Total Hours Needed <i class="fa fa-search ms-1"></i></a>
+                                            <a class="badge bg-primary" href="#">Pixelwibes <i class="fa fa-search ms-1"></i></a>
+                                            <a class="badge bg-primary" href="#">Theme <i class="fa fa-search ms-1"></i></a>
+                                            <a class="badge bg-primary" href="#">Tracker <i class="fa fa-search ms-1"></i></a>
                                         </div>
                 
                                     </div>
@@ -287,7 +327,7 @@
                             <div class="card shadow menu slidedown position-absolute zindex-modal">
                                 <div class="card-body p-3">
                                     <div class="row g-3">
-                                        <div class="d-none d-lg-block col-lg-2 text-Reading">
+                                        <div class="d-none d-lg-block col-lg-2 text-start">
                                             <h6 class="px-2 mb-2">Download App</h6>
                                             <img src="assets/images/qr-code.png" alt="Download App" class="img-fluid">
                                         </div>
@@ -377,7 +417,7 @@
                                                         </div>
                                                         <div class="flex-fill text-truncate">
                                                             <p class="h6 mb-0">Stater page</p>
-                                                            <small class="text-muted">Reading working with</small>
+                                                            <small class="text-muted">Start working with</small>
                                                         </div>
                                                     </a>
                                                 </li>
@@ -405,10 +445,10 @@
                                                                 <polygon xmlns="http://www.w3.org/2000/svg" class="st1" points="11.91,12.5 10.58,13.99 8.95,12.36 2.65,17.76 1.35,16.24 9.05,9.64 "></polygon>
                                                             </svg>
                                                         </div>
-                                                        <!-- <div class="flex-fill text-truncate">
+                                                        <div class="flex-fill text-truncate">
                                                             <p class="h6 mb-0">Changelog</p>
                                                             <small class="text-muted">Changelog Update</small>
-                                                        </div> -->
+                                                        </div>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -430,192 +470,225 @@
                     <div class="row align-items-center">
                         <div class="border-0 mb-4">
                             <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-                                <h3 class="h4 mb-0">Student Logs</h3>
-                            </div>
-                        </div>
-                    </div> <!-- Row Langu  -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-lg-2">
-                            <label  class="form-label">Student</label>
-                            <select class="form-select">
-                                <option selected>Leila K</option>
-                                <option value="1">Atlas K</option>
-                                <option value="2">Stella A</option>
-                                <option value="3">Emalyn A</option>
-                                <option value="4">Niles Xavier</option>
-                            </select>
-                        </div>  
-                        <div class="col-lg-2">
-                            <label  class="form-label">Log Period</label>
-                            <select class="form-select">
-                                <option selected>Custom</option>
-                                <option value="1">Day</option>
-                                <option value="2">Week</option>
-                                <option value="3">Month</option>
-                            </select>
-                        </div> 
-                        <div class="col-lg-3">
-                            <label class="form-label">From</label>
-                            <input type="date" class="form-control" value="2021-12-27">
-                        </div> 
-                        <div class="col-lg-3">
-                            <label class="form-label">To</label>
-                            <input type="date" class="form-control" value="2021-12-29">
-                        </div> 
-                        <div class="col-lg-2">
-                            <label class="form-label">Show Logs</label>
-                            <button type="submit" class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                    <div class="row clearfix g-3">
-                        <div class="col-sm-12">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <table id="myProjectTable" class="table table-hover align-middle mb-0" style="width:100%">
-                                        <thead>
-                                            <tr>
-                                                <th>Student</th>
-                                                <th>Date</th>
-                                                <th>LA</th>
-                                                <th>Math</th>
-                                                <th>Social Studies</th>
-                                                <th>Science</th>
-                                                <th>Non-Core</th>
-                                                <th>Total Time</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
-                                                    <span class="fw-bold ms-1">Leila K</span>
-                                                </td>
-                                                <td>
-                                                    26 Jan 2022
-                                                </td>
-                                                <td>
-                                                    1:45
-                                                </td>
-                                                <td>
-                                                     1:30
-                                                </td>
-                                                <td>
-                                                     1:25 
-                                                </td>
-                                                <td>
-                                                    0:45 
-                                                </td>
-                                                <td>
-                                                    1:10
-                                                </td>
-                                                <td>6:00</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
-                                                    <span class="fw-bold ms-1">Leila K</span>
-                                                </td>
-                                                <td>
-                                                    27 Jan 2022
-                                                </td>
-                                                <td>
-                                                    1:20
-                                                </td>
-                                                <td>
-                                                     1:00
-                                                </td>
-                                                <td>
-                                                     :25 
-                                                </td>
-                                                <td>
-                                                    1:15 
-                                                </td>
-                                                <td>
-                                                    3:00
-                                                </td>
-                                                <td>7:00</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
-                                                    <span class="fw-bold ms-1">Leila K</span>
-                                                </td>
-                                                <td>
-                                                    28 Jan 2022
-                                                </td>
-                                                <td>
-                                                    1:45
-                                                </td>
-                                                <td>
-                                                     1:30
-                                                </td>
-                                                <td>
-                                                     1:25 
-                                                </td>
-                                                <td>
-                                                    0:45 
-                                                </td>
-                                                <td>
-                                                    1:10
-                                                </td>
-                                                <td>6:00</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
-                                                    <span class="fw-bold ms-1">Leila K</span>
-                                                </td>
-                                                <td>
-                                                    29 Jan 2022
-                                                </td>
-                                                <td>
-                                                    1:45
-                                                </td>
-                                                <td>
-                                                     1:30
-                                                </td>
-                                                <td>
-                                                     1:25 
-                                                </td>
-                                                <td>
-                                                    0:45 
-                                                </td>
-                                                <td>
-                                                    1:10
-                                                </td>
-                                                <td>6:00</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
-                                                    <span class="fw-bold ms-1">Leila K</span>
-                                                </td>
-                                                <td>
-                                                    30 Jan 2022
-                                                </td>
-                                                <td>
-                                                    2:45
-                                                </td>
-                                                <td>
-                                                     :30
-                                                </td>
-                                                <td>
-                                                     :25 
-                                                </td>
-                                                <td>
-                                                    1:45 
-                                                </td>
-                                                <td>
-                                                    1:10
-                                                </td>
-                                                <td>6:00</td>   
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <h3 class="h4 mb-0">Employee List</h3>
+                                <div class="col-auto d-flex w-sm-100 mt-2 mt-sm-0">
+                                    <button type="button" class="btn btn-dark btn-set-task w-sm-100" data-bs-toggle="modal" data-bs-target="#addemp"><i class="icofont-plus-circle me-2 fs-6"></i>Add Employee</button>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- Row Langu -->
+                    </div> <!-- Row end  -->
+                    <div class="row clearfix g-3">
+                    <div class="col-sm-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <table id="myProjectTable" class="table table-hover align-middle mb-0" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee Name</th>
+                                            <th>Project</th>
+                                            <th>Total Task</th>
+                                            <th>Email</th>
+                                            <th>Project Assigned</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                           <td>
+                                               <img class="avatar rounded-circle" src="assets/images/xs/avatar1.svg" alt="">
+                                               <span class="fw-bold ms-1">Joan Dyer</span>
+                                           </td>
+                                           <td>
+                                               <a href="projects.html">Box of Crayons</a>
+                                           </td>
+                                           <td>
+                                                <a href="task.html">5 Task</a>
+                                           </td>
+                                           <td>
+                                                <a href="mailto:">JoanDyer@gmail.com</a>
+                                           </td>
+                                           <td>
+                                                23/02/21
+                                           </td>
+                                           <td>
+                                                <span class="badge bg-success">Working</span>
+                                           </td>
+                                            <td>
+                                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                    <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar2.svg" alt="">
+                                                <span class="fw-bold ms-1">Ryan	Randall</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Fast Cad</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">8 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">RyanRandall@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 14/04/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar3.svg" alt="">
+                                                <span class="fw-bold ms-1">Phil	Glover</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Gob Geeklords</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">2 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">PhilGlover@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 18/03/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar4.svg" alt="">
+                                                <span class="fw-bold ms-1">Victor Rampling</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Java Dalia</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">7 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">VictorRampling@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 18/06/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar5.svg" alt="">
+                                                <span class="fw-bold ms-1">Sally Graham</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Practice to Perfect</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">9 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">SallyGraham@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 13/01/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar6.svg" alt="">
+                                                <span class="fw-bold ms-1">Robert Anderson</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Rhinestone</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">5 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">RobertAnderson@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 14/01/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <img class="avatar rounded-circle" src="assets/images/xs/avatar7.svg" alt="">
+                                                <span class="fw-bold ms-1">Ryan	Stewart</span>
+                                            </td>
+                                            <td>
+                                                <a href="projects.html">Social Geek Made</a>
+                                            </td>
+                                            <td>
+                                                 <a href="task.html">15 Task</a>
+                                            </td>
+                                            <td>
+                                                 <a href="mailto:">RyanStewart@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                 13/01/21
+                                            </td>
+                                            <td>
+                                                 <span class="badge bg-success">Working</span>
+                                            </td>
+                                             <td>
+                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                     <button type="button" class="btn btn-outline-secondary"><i class="icofont-edit text-success"></i></button>
+                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
+                                                 </div>
+                                             </td>
+                                         </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!-- Row End -->
                 </div>
             </div>
 
@@ -726,7 +799,7 @@
                                     <li class="list-group-item d-flex align-items-center py-1 px-2">
                                         <div class="form-check form-switch theme-switch mb-0">
                                             <input class="form-check-input" type="checkbox" id="theme-switch">
-                                            <label class="form-check-label" for="theme-switch">Enable Dark Mode</label>
+                                            <label class="form-check-label" for="theme-switch">Enable Dark Mode!</label>
                                         </div>
                                     </li>
                                     <li class="list-group-item d-flex align-items-center py-1 px-2">
@@ -744,7 +817,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="modal-footer justify-content-Reading">
+                        <div class="modal-footer justify-content-start">
                             <button type="button" class="btn btn-white border lift" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary lift">Save Changes</button>
                         </div>
@@ -752,36 +825,36 @@
                 </div>
             </div>
 
-            <!-- Create Student-->
+            <!-- Create Employee-->
             <div class="modal fade" id="addemp" tabindex="-1"  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title  fw-bold" id="createprojectlLabel"> Add Student</h5>
+                            <h5 class="modal-title  fw-bold" id="createprojectlLabel"> Add Employee</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput877" class="form-label">Student Name</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput877" placeholder="List the Subject ">
+                                <label for="exampleFormControlInput877" class="form-label">Employee Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput877" placeholder="Explain what the Project Name">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput977" class="form-label">Employee Company</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput977" placeholder="Explain what the Project Name">
                             </div>
                             <div class="mb-3">
-                                <label for="formFileMultipleoneone" class="form-label">Student Profile</label>
+                                <label for="formFileMultipleoneone" class="form-label">Employee Profile</label>
                                 <input class="form-control" type="file" id="formFileMultipleoneone" >
                             </div>
                             <div class="deadline-form">
                                 <form>
                                     <div class="row g-3 mb-3">
                                         <div class="col-sm-6">
-                                            <label for="exampleFormControlInput1778" class="form-label">Student ID</label>
+                                            <label for="exampleFormControlInput1778" class="form-label">Employee ID</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1778" placeholder="User Name">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="exampleFormControlInput2778" class="form-label">Start Date</label>
+                                            <label for="exampleFormControlInput2778" class="form-label">Joining Date</label>
                                             <input type="date" class="form-control" id="exampleFormControlInput2778">
                                         </div>
                                     </div>
@@ -797,7 +870,7 @@
                                     </div> 
                                     <div class="row g-3 mb-3">
                                         <div class="col">
-                                            <label for="exampleFormControlInput477" class="form-label">Email</label>
+                                            <label for="exampleFormControlInput477" class="form-label">Email ID</label>
                                             <input type="email" class="form-control" id="exampleFormControlInput477" placeholder="User Name">
                                         </div>
                                         <div class="col">
@@ -807,27 +880,27 @@
                                     </div>
                                     <div class="row g-3 mb-3">
                                         <div class="col">
-                                            <!-- <label  class="form-label">Department</label>
+                                            <label  class="form-label">Department</label>
                                             <select class="form-select" aria-label="Default select Project Category">
                                                 <option selected>Web Development</option>
                                                 <option value="1">It Management</option>
                                                 <option value="2">Marketing</option>
-                                            </select> -->
+                                            </select>
                                         </div>
                                         <div class="col">
                                             <label  class="form-label">Designation</label>
                                             <select class="form-select" aria-label="Default select Project Category">
-                                                <!-- <option selected>UI/UX Design</option>
+                                                <option selected>UI/UX Design</option>
                                                 <option value="1">Website Design</option>
                                                 <option value="2">App Development</option>
                                                 <option value="3">Quality Assurance</option>
                                                 <option value="4">Development</option>
-                                                <option value="5">BackLanguage Arts Development</option>
+                                                <option value="5">Backend Development</option>
                                                 <option value="6">Software Testing</option>
                                                 <option value="7">Website Design</option>
                                                 <option value="8">Marketing</option>
                                                 <option value="9">SEO</option>
-                                                <option value="10">Other</option> -->
+                                                <option value="10">Other</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1050,6 +1123,7 @@
             </div>
 
             
+
         </div>
 
     </div>
