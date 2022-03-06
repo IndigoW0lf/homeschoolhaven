@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {
-                        "dist/assets/css/timetracker.style.min.css":             [ "scss/main.scss"],
+                        "assets/css/timetracker.style.min.css":             [ "scss/main.scss"],
                     },
                 ],
             },
@@ -18,10 +18,10 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    "dist/assets/bundles/libscripts.bundle.js": [ "node_modules/jquery/dist/jquery.js", "node_modules/bootstrap/dist/js/bootstrap.bundle.js", "dist/assets/plugin/colorpicker/colorpicker.js"],
-                    "dist/assets/bundles/apexcharts.bundle.js": [ "node_modules/apexcharts/dist/apexcharts.min.js"],
-                    "dist/assets/bundles/sparkline.bundle.js":  [ "node_modules/jquery-sparkline/jquery.sparkline.min.js"],
-                    "dist/assets/bundles/dataTables.bundle.js": [ "dist/assets/plugin/datatables/jquery.dataTables.min.js", "dist/assets/plugin/datatables/dataTables.bootstrap5.min.js","dist/assets/plugin/datatables/dataTables.responsive.min.js"],
+                    "assets/bundles/libscripts.bundle.js": [ "node_modules/jquery/jquery.js", "node_modules/bootstrap/js/bootstrap.bundle.js", "assets/plugin/colorpicker/colorpicker.js"],
+                    "assets/bundles/apexcharts.bundle.js": [ "node_modules/apexcharts/apexcharts.min.js"],
+                    "assets/bundles/sparkline.bundle.js":  [ "node_modules/jquery-sparkline/jquery.sparkline.min.js"],
+                    "assets/bundles/dataTables.bundle.js": [ "assets/plugin/datatables/jquery.dataTables.min.js", "assets/plugin/datatables/dataTables.bootstrap5.min.js","assets/plugin/datatables/dataTables.responsive.min.js"],
                 },
             },
         },
