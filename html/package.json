@@ -18,7 +18,6 @@
         "daterangepicker": "^3.1.0",
         "font-awesome": "^4.7.0",
         "fullcalendar": "^5.5.1",
-        "grunt-contrib-uglify": "^5.0.0",
         "jquery": "^3.6.0",
         "jquery-sparkline": "^2.4.0",
         "jquery.steps": "^1.1.2",
@@ -26,7 +25,10 @@
         "prismjs": "^1.25.0"
     },
     "devDependencies": {
-        "grunt": "^1.4.0",
+        "grunt": "^1.4.1",
+        "grunt-bootstrap": "^0.1.0",
+        "grunt-contrib-jshint": "^3.2.0",
+        "grunt-contrib-uglify": "^5.0.1",
         "grunt-sass": "^2.1.0"
     }
 }
