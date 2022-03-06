@@ -1,6 +1,7 @@
 # 🐺 I'm Kai Indigo Wolf  ![](https://visitor-badge.glitch.me/badge?page_id=indigow0lf.indigow0lf)
 
 ### Welcome to Homeschool Haven
+[Intro to Project Video](https://youtu.be/aRZwH6VTDu8)
 
 
 <img align="right" alt="png" src="https://i.ibb.co/KxLtyn4/Homeschool-Haven.png" width="450" height="270"/>  
