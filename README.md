@@ -1,4 +1,4 @@
-# 🐺 I'm Kai Indigo Wolf  ![](https://visitor-badge.glitch.me/badge?page_id=indigow0lf.indigow0lf)
+# 🐺 I'm Kai Indigo Wolf  ![](https://visitor-badge.glitch.me/badge?page_id=indigow0lf.homeschoolhaven)
 
 ### Welcome to Homeschool Haven
 [Intro to Project Video](https://youtu.be/aRZwH6VTDu8)
