@@ -28,15 +28,10 @@ $(function() {
         $('.sidebar').removeClass('open');
     });
     
-    // layout a sidebar mini version
+    // layout A sidebar mini version
     $('.sidebar-mini-btn').on('click', function () {
         $('.sidebar').toggleClass('sidebar-mini');
         $('.sidebar-mini').removeClass('open');
-    });
-
-    // chat page chatlist toggle js
-    $('.chatlist-toggle').on('click', function () {
-        $('.card-chat').toggleClass('open');
     });
 
     // LTR/RTL active js
@@ -45,16 +40,7 @@ $(function() {
             $("body").addClass('rtl_mode');
         }else{
             $("body").removeClass('rtl_mode');
-        }
-       
-    });
-
-    // search result div show/hide
-    $(".main-search input").on("focus",function(){
-        $('.search-result').addClass("show");
-    });
-    $(".main-search input").on("blur",function(){
-        $('.search-result').removeClass("show");
+        } 
     });
 
      // google font setting
